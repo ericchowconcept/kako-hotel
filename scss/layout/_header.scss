@@ -7,7 +7,9 @@ header{
     align-items: center;
 
     gap: 1rem;
-    z-index: 99;
+    
+
+    
 
     
 }
@@ -36,6 +38,8 @@ header{
     font-size: 1rem;
     overflow: hidden;
 
+    
+
     img{
         color: black;
         width: 8rem;
@@ -50,7 +54,6 @@ header{
     }
     
     &:hover{
-        color: $rose-darker;
         transform: scale(1.3);
     }
 }
