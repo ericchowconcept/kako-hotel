@@ -1,0 +1,24 @@
+.card{
+    // border-radius: 5px;
+    border-radius: double(10)+px;
+    box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.459);
+    max-width: 15rem;
+    min-height: 30rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 2em;
+    gap: 2em;
+    img{
+        width: 10rem;
+        height: 10rem;
+        object-fit: cover;
+        object-position: center;
+        border-radius: 50%;
+        box-shadow: 2px 2px 8px black, -2px -2px 8px rgba(240, 235, 235, 0.795);
+    }
+    &:hover{
+    box-shadow: -2px -2px 8px black;
+}
+}

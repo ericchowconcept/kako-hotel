@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <link rel="stylesheet" href="assets/css/style.css">
+    <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
+    <script defer src="./assets/js/main.js"></script>
+    <title>La Ferme Rose - Hôtel de charme à Moustier-Sainte-Marie</title>
+</head>
+<body>
+    <header>
+        <a href="#" class="logo">
+            <img src="assets/img/final1-01.png" alt="villa-logo">
+            <div>
+                <p>La ferme rose</p>
+                <span>Moustier Sainte Marie</span>
+            </div>
+            
+        </a>
+        <div class="menu">
+            <a href="#" class="btn" target=_blank>RESERVER</a>
+            <button class="menu-nav-toggle" aria-controls="primary-navigation" aria-expanded="false">
+                <span class="line1"></span>
+                <span class="line2"></span>
+                <span class="line3"></span>
+            </button> 
+        </div>
+        <!-- <img src="./assets/img/menu-burger.png" alt="menu-burger" class="burger"> -->
+        <nav id="primary-navigation" class="primary-navigation">
+            <a href="#" class="active"><span aria-hidden="true"></span>HÔTEL</a>
+            <a href="#about" class="nav-link"><span aria-hidden="true"></span>MOUSTIER</a>
+            <a href="#experience" class="nav-link"><span aria-hidden="true"></span>EXPERIENCES</a>
+            <a href="#experience" class="nav-link"><span aria-hidden="true"></span>GALLERY</a>
+            <a href="#contact" class="nav-link"><span aria-hidden="true"></span>CONTACT US</a>
+        </nav>
+    </header>
+    <main>
+        <div id="hero" class="hero">
+            <video autoplay muted loop poster="/Users/ericchow/Documents/KAKO/kako/assets/img/piscine-3-booking.jpg">
+                <source src="/assets/img/hotel-v2.mp4" type="video/mp4">
+                Votre navigateur ne supporte pas ce vidéo tag
+            </video>
+        </div>
+        <div id="about" class="about">
+            <div class="about-content">
+                <h2>Profitez d'une expérience exclusive dans un hôtel de charme en pleine nature à 1 km de Moustiers-Sainte-Marie</h2>
+                <div class="tiles">
+                    <img src="/assets/img/tile1.png" alt="">
+                    <img src="/assets/img/tile2.png" alt="">
+                    <img src="/assets/img/tile3.png" alt="">
+                </div>
+                <div class="about-desc">
+                    <p>Venez vivre Moustier-Sainte-Marie, son histoire, sa culture et ses charmes naturels avec confort et authenticité, en vous reconnectant avec la provence.</p>
+                </div>
+            </div>
+        </div>
+        <div class="accomodation">
+            <div class="accomodation-txt">
+                <!-- <p>La Ferme Rose offre une expérience hôtelière singulière : douze chambres, chacune conçue de manière individuelle avec de ravissantes salles de bains entièrement couvertes de faïence de Salernes. Dans cette atmosphère unique et inattendue, laissez-vous porter par une ambiance détendue.</p> -->
+                <p>Découvrez un séjour où confort et chaleur s'associent à l'espace et à la sophistication pour une ambiance douillette.</p>
+                <a href="#" class="btn-light" target=_blank>Découvrir nos chambres</a>
+            </div>
+        </div>
+        <div id="experience" class="experience">
+            <h2>Expérience</h2>
+            <div class="experience-content">
+                <img src="/assets/img/verdon-section.jpg" alt="gorge-du-verdon">
+                <div class="desc">
+                    <h3>Gorge du verdon</h3>
+                    <div class="info">
+                        <p>Explorez les merveilleux paysages des Gorges du Verdon en toute liberté grâce à notre location de bateaux électriques. Naviguez à votre rythme, imprégnez-vous de la beauté naturelle qui vous entoure et créez des souvenirs inoubliables le long de la rivière. </p>
+                    </div>  
+                    <div>
+                        <a href="#" class="btn-light">En savoir plus</a>   
+                    </div>
+                </div>
+            </div>
+            <div class="experience-content">
+                <div class="desc">
+                    <h3>Moustier 360°</h3>
+                    <div class="info">
+                        <p>Plongez dans l'élégance cachée du Kako Bistrot, niché au cœur du village Moustiers-Saint-Marie. Détendez-vous en savourant un verre de vin ou une coupe de champagne dans une ambiance apaisante sur notre belle terrasse, loin du tumulte touristique.</p>
+                    </div>  
+                    <div>
+                        <a href="#" class="btn-light">En savoir plus</a>   
+                    </div>
+                </div>
+                <img src="/assets/img/kako-bistrot.jpeg" alt="gorge-du-verdon">
+
+            </div>
+        </div> 
+        <div id="contact" class="contact">
+            <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11511.236138750646!2d6.2136022!3d43.8390574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cbee70c76779d7%3A0xad23b0336b12145e!2sH%C3%B4tel%20de%20la%20Ferme%20Rose!5e0!3m2!1sen!2sfr!4v1690386547661!5m2!1sen!2sfr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+            <div class="contact-content">
+                <h2>Contact</h2>
+                <div class="contact-form">
+                    <label for="text">Quel est votre nom?</label>
+                    <input type="text" name="name"placeholder="Mary Poppins" id="text">
+                    
+                    <label for="email">Quel est votre mail?</label>
+                    <input type="email" placeholder="Votre email" name="email">
+
+                    <label for="message">Votre message</label>
+                    <textarea  id="message" name="message" placeholder="Hello Kako, je souhaite...."></textarea>
+                </div>
+            </div>
+          
+        </div>
+    </main>
+    <footer>
+        <div class="social">
+            <i class="fi fi-brands-github"></i>
+            <i class="fi fi-brands-instagram"></i>
+            <i class="fi fi-brands-linkedin"></i>
+        </div>
+            <p> Designed & Developed by Eric Chow</p>
+    </footer>
+</body>
+</html>
