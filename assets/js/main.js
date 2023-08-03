@@ -1,4 +1,4 @@
-const menuBurger = document.querySelector('.menu-nav-toggle');
+const menuBurger = document.querySelector('.burger');
 const menuNav = document.querySelector('.primary-navigation');
 
 menuBurger.addEventListener('click', ()=>{
