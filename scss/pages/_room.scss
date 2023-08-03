@@ -1,0 +1,104 @@
+
+.hero{
+    min-height: 60vh;
+}
+//*about-section
+.about{
+    min-height: 40vh;
+    @extend %section;
+    
+    background-color: $grey;
+}
+
+.about-content-room{
+
+    display: flex;
+    flex-flow: column;
+    align-items: center;
+    justify-content: center;
+    width: 70vw;
+    
+
+    font-family: $main-font;
+    text-align: center;
+   
+
+    h2, p{
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 80%;
+        color: $main-txt-dark;
+        margin-bottom: 1.2rem;
+    }
+}
+
+//*room listing
+.room{
+    min-height: 100vh;
+    @extend %section;
+    
+    background-color: $light-pink;
+}
+
+.room-list{
+    display: flex;
+    width: 70vw;
+    gap: 3rem;
+}
+
+.room-content{
+    width: 49%;
+    min-height: 70rem;
+    display: flex;
+    
+    flex-flow: column wrap;
+    
+
+    img{
+        width: 100%;
+        height: 30%;
+        object-fit: cover;
+        object-position: center;
+    }
+
+    .desc{
+        background-color: $grey;
+        padding: 2rem;
+        gap:  2.5rem;
+
+    
+        display: flex;
+        flex-direction: column;
+        
+        justify-content: center;
+        text-align: start;
+
+        h3{
+            font-weight: 400;
+            font-size: 2.5rem;
+        }
+        
+    }
+}
+.amenities{
+    display: flex;
+    flex-flow: column wrap;
+    
+    h4{
+        margin-bottom: 1rem;
+    }
+    .amenities-icon-wrap{
+        display: flex;
+
+        .amenities-icon{
+            width: 50%;
+            font-size: 1rem;
+            align-items: flex-start;
+            p{
+                display: flex;
+                margin-bottom: 1rem;
+            }
+            
+        }
+    }
+}

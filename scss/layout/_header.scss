@@ -127,7 +127,8 @@ header{
 .primary-navigation{
 
     display: none;
-    color: $main-txt-dark;
+   
+    color: $main-txt-light;
     font-family: $main-font;
     font-size: 0.9rem;
 
@@ -156,7 +157,7 @@ header{
 
 .primary-navigation{
     display: none;
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: rgba(238, 223, 210, 0.107);
     backdrop-filter: blur(1rem);
     z-index: 990;
 }

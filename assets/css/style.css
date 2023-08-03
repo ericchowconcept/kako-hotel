@@ -1,5 +1,5 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
-.about, .experience {
+.about, .experience, .room {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -179,7 +179,7 @@ header {
 
 .primary-navigation {
   display: none;
-  color: #020202;
+  color: #fbf6ef;
   font-family: "Tinos", serif;
   font-size: 0.9rem;
   display: -webkit-box;
@@ -214,7 +214,7 @@ header {
 
 .primary-navigation {
   display: none;
-  background-color: rgba(255, 255, 255, 0.315);
+  background-color: rgba(238, 223, 210, 0.107);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   z-index: 990;
@@ -791,6 +791,133 @@ footer p {
   .contact-form ::placeholder {
     font-size: 0.8rem;
   }
+}
+
+.hero {
+  min-height: 60vh;
+}
+
+.about {
+  min-height: 40vh;
+  background-color: #fafafa;
+}
+
+.about-content-room {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column;
+          flex-flow: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  width: 70vw;
+  font-family: "Tinos", serif;
+  text-align: center;
+}
+
+.about-content-room h2, .about-content-room p {
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 80%;
+  color: #020202;
+  margin-bottom: 1.2rem;
+}
+
+.room {
+  min-height: 100vh;
+  background-color: #f5efeb;
+}
+
+.room-list {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  width: 70vw;
+  gap: 3rem;
+}
+
+.room-content {
+  width: 49%;
+  min-height: 70rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.room-content img {
+  width: 100%;
+  height: 30%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  -o-object-position: center;
+     object-position: center;
+}
+
+.room-content .desc {
+  background-color: #fafafa;
+  padding: 2rem;
+  gap: 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  text-align: start;
+}
+
+.room-content .desc h3 {
+  font-weight: 400;
+  font-size: 2.5rem;
+}
+
+.amenities {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+}
+
+.amenities h4 {
+  margin-bottom: 1rem;
+}
+
+.amenities .amenities-icon-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.amenities .amenities-icon-wrap .amenities-icon {
+  width: 50%;
+  font-size: 1rem;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: flex-start;
+}
+
+.amenities .amenities-icon-wrap .amenities-icon p {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  margin-bottom: 1rem;
 }
 
 .card {
