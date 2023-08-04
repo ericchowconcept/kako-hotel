@@ -5,4 +5,11 @@ menuBurger.addEventListener('click', ()=>{
     menuNav.classList.toggle('menu-mobile')
 })
 
-const navbar = document.querySelector('header');
+
+    
+
+
+    
+
+
+

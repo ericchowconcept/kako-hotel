@@ -6,8 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="">
     <link rel="stylesheet" href="/assets/css/style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
-    <script defer src="./assets/js/main.js"></script>
+    <script defer src="/assets/js/main.js"></script>
+   
     <title>La Ferme Rose - Hôtel de charme à Moustier-Sainte-Marie</title>
 </head>
 <body>
@@ -39,7 +41,7 @@
     </header>
     <main>
         <div id="hero" class="hero">
-            <video autoplay muted loop poster="/Users/ericchow/Documents/KAKO/kako/assets/img/piscine-3-booking.jpg">
+            <video autoplay muted loop>
                 <source src="/assets/img/rooms-v2.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas ce vidéo tag
             </video>
@@ -54,50 +56,98 @@
         </div>
         <section id="experience" class="room">
             <div class="room-list">
-                <div class="room-content">
-                    <img src="/assets/img/verdon-section.jpg" alt="gorge-du-verdon">
-                    <div class="desc">
-                        <h3>Chambre Amande</h3>
-                        <div class="info">
-                            <p>Explorez les merveilleux paysages des Gorges du Verdon en toute liberté grâce à notre location de bateaux électriques. Naviguez à votre rythme, imprégnez-vous de la beauté naturelle qui vous entoure et créez des souvenirs inoubliables le long de la rivière. </p>
-                        </div>  
-                        <div class="room-benefits">
-                            <h4>Prestation inclus:</h4>
-                            <div class="room-benefits-list">
-                                <ul>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                    <li></li>
-                                </ul>
-                                <div class="amenities-icon">
-                                    <p>Wi-fi</p>
-                                    <p>Climatisation</p>
+                <!-- <div class="filter">
+                    <ul role="tablist" class="filter-items">
+                        <li role="tab" tabindex="-1" aria-selected="false" class="filter-item"><span>Afficher tout</span></li> 
+                        <li role="tab" tabindex="-1" aria-selected="false" class="filter-item"><span>Chambres</span></li> 
+                        <li role="tab" tabindex="0" aria-selected="true" class="filter-item is-active"><span>Suites</span></li>
+                    </ul>
+                </div> -->
+                <div class="room-list-wrapper">
+                    <div class="room-item">
+                        <div class="room-image">
+                            
+                          
+                        </div>
+                        <div class="room-content">
+                            <div class="room-title">
+                                <h3>Chambre Amande avec terrasse</h3>
+                            </div>
+                            <div class="room-description">
+                                <p>Chambre authentique avec carreaux en terre cuite Salernes, mobilier style naturel sous une jolie charpente de toit apparente, créée et installé par un compagnon de Provence. Une grande salle de bains avec baignoire-bassin en faïence de Salernes de couleur amande. </p>
+                            </div>  
+                            <div class="room-benefits">
+                                <div class="room-benefits-label">
+                                    <h4>Prestation incluses :</h4>
                                 </div>
-                                <div class="amenities-icon">
-                                    <p>Salle de bain privative</p>
-                                    <p>Téléphone avec ligne directe</p>
+                                <div class="room-benefits-list">
+                                    <ul>
+                                        <li>
+                                            <img src="/assets/img/icons/wifi.png" alt="wifi-icon">
+                                            <p>Wi-fi</p>
+                                        </li>
+                                        <li>
+                                            <img src="/assets/img/icons/freezing.png" alt="aircon-icon">
+                                            <p>Climatisation</p>
+                                        </li>
+                                        <li>
+                                            <img src="/assets/img/icons/bathtub.png" alt="bathroom-icon">
+                                            <p>Salle de bain privative</p>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="/assets/img/icons/telephone.png" alt="phone-icon"> 
+                                            <p>Téléphone avec ligne directe</p>
+                                        </li>
+                                    </ul>
                                 </div>
                             </div>
-                        </div>
-                        <hr>
-                        <div>
-                            <a href="#" class="btn-light">En savoir plus</a>   
-                        </div>
-                    </div>
-                </div>
-                <div class="room-content">
-                    <img src="/assets/img/kako-bistrot.jpeg" alt="gorge-du-verdon">
-                    <div class="desc">
-                        <h3>Moustier 360°</h3>
-                        <div class="info">
-                            <p>Plongez dans l'élégance cachée du Kako Bistrot, niché au cœur du village Moustiers-Saint-Marie. Détendez-vous en savourant un verre de vin ou une coupe de champagne dans une ambiance apaisante sur notre belle terrasse, loin du tumulte touristique.</p>
-                        </div>  
-                        <div>
-                            <a href="#" class="btn-light">En savoir plus</a>   
+                            <div class="room-utility">
+                                <a href="#" class="btn-light">En savoir plus</a>   
+                            </div>
                         </div>
                     </div>
-
+                    <div class="room-item">
+                        
+                          
+                        <div class="room-content">
+                            <div class="room-title">
+                                <h3>Chambre Amande avec terrasse</h3>
+                            </div>
+                            <div class="room-description">
+                                <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Magni, recusandae error, nobis accusamus, quam id necessitatibus aliquid quo nam nemo unde voluptates debitis dolor aspernatur.</p>
+                            </div>  
+                            <div class="room-benefits">
+                                <div class="room-benefits-label">
+                                    <h4>Prestation incluses :</h4>
+                                </div>
+                                <div class="room-benefits-list">
+                                    <ul>
+                                        <li>
+                                            <img src="/assets/img/icons/wifi.png" alt="wifi-icon">
+                                            <p>Wi-fi</p>
+                                        </li>
+                                        <li>
+                                            <img src="/assets/img/icons/freezing.png" alt="aircon-icon">
+                                            <p>Climatisation</p>
+                                        </li>
+                                        <li>
+                                            <img src="/assets/img/icons/bathtub.png" alt="bathroom-icon">
+                                            <p>Salle de bain privative</p>
+                                            
+                                        </li>
+                                        <li>
+                                            <img src="/assets/img/icons/telephone.png" alt="phone-icon"> 
+                                            <p>Téléphone avec ligne directe</p>
+                                        </li>
+                                    </ul>
+                                </div>
+                            </div>
+                            <div class="room-utility">
+                                <a href="#" class="btn-light">En savoir plus</a>   
+                            </div>
+                        </div>
+                    </div>
                 </div>
             </div>
         </section> 
