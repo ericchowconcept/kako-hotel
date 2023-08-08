@@ -5,6 +5,8 @@
 //     menuNav.classList.toggle('menu-mobile')
 // })
 
+//*carousel
+
 const track = document.querySelector('.carousel__track');
 const slides = Array.from(track.children)
 

@@ -1,4 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;1,200&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Roboto:wght@100;300;400;500;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 .about, .experience, .room {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -850,7 +850,7 @@ footer p {
 
 .room-item {
   width: 49%;
-  max-height: 100rem;
+  max-height: 70rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -858,13 +858,17 @@ footer p {
   -webkit-box-direction: normal;
       -ms-flex-flow: column wrap;
           flex-flow: column wrap;
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
+}
+
+.room-item .room-image {
+  height: 18rem;
 }
 
 .room-item .room-content {
-  height: 25rem;
+  height: 23rem;
   background-color: #fafafa;
-  padding: 1rem 2rem;
+  padding: 2rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -879,7 +883,7 @@ footer p {
 }
 
 .room-item .room-content .room-title {
-  font-weight: 500;
+  font-weight: 300;
   font-size: 1.5rem;
   margin-bottom: 1rem;
 }
@@ -887,10 +891,6 @@ footer p {
 .room-item .room-content .room-description {
   font-weight: 300;
   margin-bottom: 1rem;
-}
-
-.room-image {
-  background-color: aqua;
 }
 
 .room-benefits {
@@ -927,94 +927,6 @@ footer p {
 
 .room-utility {
   padding-top: 2rem;
-}
-
-.carousel {
-  position: relative;
-  height: 600px;
-  width: 80%;
-  margin: 0 auto;
-}
-
-.carousel__image {
-  width: 100%;
-  height: 100%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-.carousel__track-container {
-  background-color: aqua;
-  height: 100%;
-  position: relative;
-  overflow: hidden;
-}
-
-.carousel__track {
-  list-style: none;
-  position: relative;
-  height: 100%;
-  -webkit-transition: -webkit-transform 250ms ease-in;
-  transition: -webkit-transform 250ms ease-in;
-  transition: transform 250ms ease-in;
-  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
-}
-
-.carousel__slide {
-  position: absolute;
-  top: 0;
-  bottom: 0;
-  width: 100%;
-}
-
-.carousel__button {
-  position: absolute;
-  top: 50%;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  background-color: transparent;
-  border: 0;
-  cursor: pointer;
-}
-
-.carousel__button img {
-  width: 20px;
-}
-
-.carousel__button--left {
-  left: -30px;
-}
-
-.carousel__button--right {
-  right: -30px;
-}
-
-.carousel__nav {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  padding: 10px 0;
-}
-
-.carousel__indicator {
-  border: 0;
-  border-radius: 50%;
-  background-color: rgba(0, 0, 0, 0.3);
-  width: 10px;
-  height: 10px;
-  margin: 0 12px;
-  cursor: pointer;
-}
-
-.carousel__indicator.current-slide {
-  background-color: rgba(0, 0, 0, 0.75);
-}
-
-.is-hidden {
-  display: none;
 }
 
 .card {
@@ -1075,7 +987,7 @@ footer p {
 }
 
 .btn-light {
-  font-family: "Nunito", sans-serif;
+  font-family: "Roboto", sans-serif;
   border: 2px solid #e3cab4;
   color: #e3cab4;
   font-size: 0.9rem;
@@ -1138,5 +1050,101 @@ footer p {
   width: 1rem;
   aspect-ratio: 1;
   color: white;
+}
+
+.carousel {
+  position: relative;
+  height: 100%;
+  width: 100%;
+  margin: 0 auto;
+}
+
+.carousel:hover .carousel__button {
+  opacity: 1;
+}
+
+.carousel__image {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.carousel__track-container {
+  height: 100%;
+  position: relative;
+  overflow: hidden;
+}
+
+.carousel__track {
+  list-style: none;
+  position: relative;
+  height: 100%;
+  -webkit-transition: -webkit-transform 250ms ease-in;
+  transition: -webkit-transform 250ms ease-in;
+  transition: transform 250ms ease-in;
+  transition: transform 250ms ease-in, -webkit-transform 250ms ease-in;
+}
+
+.carousel__slide {
+  position: absolute;
+  top: 0;
+  bottom: 0;
+  width: 100%;
+}
+
+.carousel__button {
+  opacity: 0;
+  position: absolute;
+  top: 50%;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  background-color: transparent;
+  border: 0;
+  cursor: pointer;
+}
+
+.carousel__button img {
+  width: 40px;
+}
+
+.carousel__button--left {
+  left: 5%;
+  z-index: 1;
+}
+
+.carousel__button--right {
+  right: 5%;
+}
+
+.carousel__nav {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  padding: 10px 0;
+  position: absolute;
+  bottom: 0;
+  left: 40%;
+}
+
+.carousel__indicator {
+  border: 0;
+  border-radius: 50%;
+  background-color: rgba(0, 0, 0, 0.3);
+  width: 10px;
+  height: 10px;
+  margin: 0 12px;
+  cursor: pointer;
+}
+
+.carousel__indicator.current-slide {
+  background-color: rgba(251, 242, 242, 0.734);
+}
+
+.is-hidden {
+  display: none;
 }
 /*# sourceMappingURL=style.css.map */
