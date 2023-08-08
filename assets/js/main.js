@@ -1,18 +1,22 @@
-// const menuBurger = document.querySelector('.burger');
-// const menuNav = document.querySelector('.primary-navigation');
+const menuBurger = document.querySelector('.burger');
+const menuNav = document.querySelector('.primary-navigation');
 
-// menuBurger.addEventListener('click', ()=>{
-//     menuNav.classList.toggle('menu-mobile')
-// })
+menuBurger.addEventListener('click', ()=>{
+    menuNav.classList.toggle('menu-mobile')
+})
 
-//*carousel
+//*carousel pour room cards
+const carouselContainer = document.querySelectorAll('.room-image');
+carouselContainer.forEach((container)=> {
 
-const track = document.querySelector('.carousel__track');
+
+console.log(carouselContainer);
+const track = container.querySelector('.carousel__track');
 const slides = Array.from(track.children)
 
-const nextButton = document.querySelector('.carousel__button--right');
-const prevButton = document.querySelector('.carousel__button--left');
-const dotsNav = document.querySelector('.carousel__nav');
+const nextButton = container.querySelector('.carousel__button--right');
+const prevButton = container.querySelector('.carousel__button--left');
+const dotsNav = container.querySelector('.carousel__nav');
 const dots = Array.from(dotsNav.children);
 
 const slideWidth = slides[0].getBoundingClientRect().width;
@@ -101,7 +105,7 @@ dotsNav.addEventListener('click', e => {
     hideShowArrows(slides, prevButton, nextButton, targetIndex);
 })
 
-    
+})   
 
 
 
