@@ -5,7 +5,12 @@ header{
     gap: 1rem;
     
     min-height: 5rem;
-    
+    width: 100%;
+    position: fixed;
+    top: 0;
+    z-index: 1;
+    background: transparent;
+
    
 }
 
@@ -18,12 +23,12 @@ header{
     text-transform: uppercase;
     padding-left: 3rem;
     font-weight: 700;
-    color: $main-txt-dark;
+    color: $main-txt-light;
     font-size: 1rem;
     overflow: hidden;
 
     img{
-        color: black;
+        
         width: 8rem;
     }
     //*logo name

@@ -45,6 +45,11 @@ header {
           align-items: center;
   gap: 1rem;
   min-height: 5rem;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 1;
+  background: transparent;
 }
 
 .logo {
@@ -59,13 +64,12 @@ header {
   text-transform: uppercase;
   padding-left: 3rem;
   font-weight: 700;
-  color: #020202;
+  color: #fbf6ef;
   font-size: 1rem;
   overflow: hidden;
 }
 
 .logo img {
-  color: black;
   width: 8rem;
 }
 
@@ -267,6 +271,7 @@ header {
 
 .hero {
   min-height: calc(100vh - 8rem);
+  height: 100vh;
   position: relative;
   overflow: hidden;
   display: -webkit-box;

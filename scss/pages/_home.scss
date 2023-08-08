@@ -2,6 +2,7 @@
 
 .hero{
     min-height: calc(100vh - 8rem);
+    height: 100vh;
     position: relative;
 
     overflow: hidden;
@@ -16,6 +17,7 @@ video{
     object-fit: cover;
     height: 100%;
     width: 100%;
+    
 
     position: absolute;
     top: 0;
