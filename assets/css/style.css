@@ -73,7 +73,7 @@ header {
   width: 8rem;
 }
 
-.logo div {
+.logo .logo-name {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -86,39 +86,6 @@ header {
 .logo:hover {
   -webkit-transform: scale(1.3);
           transform: scale(1.3);
-}
-
-.fixed {
-  width: 100%;
-  position: fixed;
-  top: 0;
-  z-index: 9;
-  background: rgba(255, 255, 255, 0.8);
-  height: 80px;
-}
-
-.fixed .logo {
-  margin-top: 20px;
-  margin-left: -100px;
-}
-
-.fixed .logo img {
-  width: 200px !important;
-}
-
-.fixed .btn {
-  border-color: #0083ae;
-  color: #0083ae;
-}
-
-.fixed .btn-white {
-  top: 25px;
-}
-
-.fixed .hamburger {
-  top: 25px;
-  -webkit-filter: brightness(0);
-  filter: brightness(0);
 }
 
 .menu {
@@ -139,7 +106,7 @@ header {
 
 .burger {
   z-index: 999;
-  width: 1.5rem;
+  width: 2.5rem;
   aspect-ratio: 1;
   border: 0;
   display: -webkit-box;
@@ -162,7 +129,7 @@ header {
 }
 
 .burger span {
-  background-color: black;
+  background-color: #fbf6ef;
   width: 100%;
   height: 4px;
   border-radius: 50px;
@@ -180,6 +147,28 @@ header {
 .burger:hover span:nth-of-type(3) {
   -webkit-transform: rotate(-45deg) translate(8px, -8px);
           transform: rotate(-45deg) translate(8px, -8px);
+}
+
+.fixed {
+  width: 100%;
+  position: fixed;
+  top: 0;
+  z-index: 9;
+  background: rgba(255, 255, 255, 0.8);
+  height: 5rem;
+}
+
+.fixed .btn.btn-header {
+  border-color: #020202;
+  color: #020202;
+}
+
+.fixed .line {
+  background-color: #020202;
+}
+
+.fixed .logo-name {
+  color: #020202;
 }
 
 .primary-navigation {
@@ -990,6 +979,18 @@ footer p {
 
 .btn:hover {
   background-color: #fafafa;
+}
+
+.btn.btn-header {
+  border: 2px solid #fbf6ef;
+  color: #fbf6ef;
+  -webkit-transition: 300ms ease-in;
+  transition: 300ms ease-in;
+}
+
+.btn.btn-header:hover {
+  background-color: #fafafa;
+  color: #020202;
 }
 
 .btn-light {

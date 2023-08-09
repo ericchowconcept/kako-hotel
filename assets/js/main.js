@@ -5,7 +5,38 @@ menuBurger.addEventListener('click', ()=>{
     menuNav.classList.toggle('menu-mobile')
 })
 
-//*carousel pour room cards
+//*header when scroll
+
+const header = document.querySelector('header');
+const btnHeader = document.querySelector('.btn.btn-header')
+const burgerXlines = document.querySelector('.line')
+
+
+//background and color of certain elements changes when scroll
+window.addEventListener('scroll',() => {
+    if (window.scrollY > 0){
+        header.classList.add('fixed');
+    }else {
+        header.classList.remove('fixed');
+    }
+})
+
+let prevScroll = window.scrollY;
+window.onscroll = function() {
+  const currentScroll = window.scrollY;
+  //header disappears after 300px
+  if (prevScroll > currentScroll) {
+    header.style.top = "0";
+  } else {
+     header.style.top = "-7.2rem";
+  }
+  //header reappears when scroll up
+  prevScroll = currentScroll;
+}
+
+
+
+//*carousel for cards on room.html
 const carouselContainer = document.querySelectorAll('.room-image');
 carouselContainer.forEach((container)=> {
 
