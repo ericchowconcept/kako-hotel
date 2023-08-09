@@ -202,10 +202,11 @@
     }
 }
 
-.wrap-info-experience {
+.wrap-info-experience.odd {
 
     padding-left: 5rem;
     float: right;
+    text-align: justify;
     
     h3{
         position: relative;
@@ -230,6 +231,35 @@
         margin-bottom: 3rem;
     }
 }
+.wrap-info-experience.even {
+
+    padding-right: 5rem;
+    float: left;
+    text-align: justify;
+    
+    h3{
+        position: relative;
+        font-weight: 400;
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+    h3::after {
+        content: "";
+        width: 5rem;
+        height: 1px;
+        background-color: $rose-darken;
+        position: absolute;
+        top: 40%;
+        right: -100px;
+      }
+    
+    
+    p {
+        font-size: 0.9rem;
+        margin-bottom: 3rem;
+    }
+}
 
 
 
@@ -237,7 +267,7 @@
 //*Contact me
 
 .contact{
-    min-height: 100vh;
+    min-height: 80vh;
     display: flex;
    
     justify-content: space-between;
@@ -245,10 +275,18 @@
     padding: 3rem;
     // background-color: $beige;
     background-color: $rose;
+    position: relative;
+    iframe {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        top: 0;
+        right: 0;
+    }
 }
 
 .contact-content{
-    width: 30vw;
+    width: 20vw;
     padding: 3rem 2rem;
 
     display: flex;
@@ -258,7 +296,7 @@
     
 
     
-    background-color: rgba(255, 255, 255, 0.315);
+    background-color: rgba(255, 255, 255, 0.329);
     backdrop-filter: blur(1rem);
     z-index: 990;
     border-radius: 5px;
@@ -312,28 +350,10 @@ input:focus, textarea:focus{
     color: $main-txt-light;
 }
 
-footer{
-    background-color: $rose;
-    color: $main-txt-light;
-    font-family: $main-font;
-
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-
-    padding: 1rem;
-    
-    .social{
-        width: 5rem;
-        margin-bottom: 0.8rem;
-        display: flex;
-        justify-content: space-between;
-    }
-   p{
-       font-size: 0.8rem;
-       margin-bottom: 1rem;
-   }
+.logo-area {
+    @extend %section;
 }
+
 @media (max-width: 1200px) {
     .intro, h2{
           font-size: 4.3rem;
@@ -532,3 +552,5 @@ footer{
         }
     }
  }
+
+

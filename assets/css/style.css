@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .room {
+.about, .logo-area, .room {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +30,93 @@ a {
 
 h2 {
   font-size: 3.8rem;
+}
+
+footer {
+  background-color: #fafafa;
+  color: #020202;
+  font-family: "Tinos", serif;
+  min-height: 20rem;
+  padding: 3.5rem 0;
+}
+
+.footer-wrap {
+  margin: 0 auto;
+  max-width: 90rem;
+}
+
+.footer-columns {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  margin-top: 3rem;
+}
+
+.footer-columns p {
+  font-size: 1rem;
+  margin-bottom: 1rem;
+}
+
+.contact-info {
+  margin-top: 2rem;
+}
+
+.contact-info i {
+  margin-right: 1rem;
+}
+
+.contact-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+.site-map {
+  list-style: none;
+}
+
+.site-map li {
+  line-height: 1.5rem;
+}
+
+.site-map a:hover {
+  color: #cb9d75;
+}
+
+.logo-footer {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Nunito", sans-serif;
+  text-transform: uppercase;
+}
+
+.logo-footer img {
+  width: 10rem;
+}
+
+.logo-footer-name {
+  color: #020202;
+  text-align: center;
+}
+
+.logo-footer-name h1 {
+  font-size: 1.5rem;
+}
+
+.developer {
+  text-align: center;
+  color: darkgray;
 }
 
 header {
@@ -475,12 +562,13 @@ header {
           align-items: center;
 }
 
-.wrap-info-experience {
+.wrap-info-experience.odd {
   padding-left: 5rem;
   float: right;
+  text-align: justify;
 }
 
-.wrap-info-experience h3 {
+.wrap-info-experience.odd h3 {
   position: relative;
   font-weight: 400;
   font-size: 2.5rem;
@@ -488,7 +576,7 @@ header {
   margin-bottom: 3rem;
 }
 
-.wrap-info-experience h3::before {
+.wrap-info-experience.odd h3::before {
   content: "";
   width: 5rem;
   height: 1px;
@@ -498,13 +586,42 @@ header {
   left: -100px;
 }
 
-.wrap-info-experience p {
+.wrap-info-experience.odd p {
+  font-size: 0.9rem;
+  margin-bottom: 3rem;
+}
+
+.wrap-info-experience.even {
+  padding-right: 5rem;
+  float: left;
+  text-align: justify;
+}
+
+.wrap-info-experience.even h3 {
+  position: relative;
+  font-weight: 400;
+  font-size: 2.5rem;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.wrap-info-experience.even h3::after {
+  content: "";
+  width: 5rem;
+  height: 1px;
+  background-color: #cb9d75;
+  position: absolute;
+  top: 40%;
+  right: -100px;
+}
+
+.wrap-info-experience.even p {
   font-size: 0.9rem;
   margin-bottom: 3rem;
 }
 
 .contact {
-  min-height: 100vh;
+  min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -516,10 +633,19 @@ header {
           align-items: center;
   padding: 3rem;
   background-color: #eedfd2;
+  position: relative;
+}
+
+.contact iframe {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  top: 0;
+  right: 0;
 }
 
 .contact-content {
-  width: 30vw;
+  width: 20vw;
   padding: 3rem 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -531,7 +657,7 @@ header {
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  background-color: rgba(255, 255, 255, 0.315);
+  background-color: rgba(255, 255, 255, 0.329);
   -webkit-backdrop-filter: blur(1rem);
           backdrop-filter: blur(1rem);
   z-index: 990;
@@ -605,39 +731,6 @@ header {
 
 input:focus, textarea:focus {
   color: #fbf6ef;
-}
-
-footer {
-  background-color: #eedfd2;
-  color: #fbf6ef;
-  font-family: "Tinos", serif;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem;
-}
-
-footer .social {
-  width: 5rem;
-  margin-bottom: 0.8rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-}
-
-footer p {
-  font-size: 0.8rem;
-  margin-bottom: 1rem;
 }
 
 @media (max-width: 1200px) {
