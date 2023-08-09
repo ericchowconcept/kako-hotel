@@ -6,10 +6,10 @@
     border: 2px solid $main-txt-dark;
     color: $main-txt-dark;
     
-    font-size: 0.9rem;
+    font-size: 1rem;
     font-weight: 200;
     padding: 0.5rem 2rem;
-    border-radius: 2px;
+    border-radius: 3px;
     min-width: 0.7rem;
 
     transition: 300ms ease-in;
@@ -32,13 +32,20 @@
     }
 }
 
-.btn-light{
-    font-family: $title-font;
+.btn.btn-info {
+    font-size: 1.2rem;
+    transition: 300ms ease-in;
+    &:hover{
+        background-color: $main-txt-dark;
+        color: $main-txt-light;
+    }
+}
+
+.btn.btn-rose{
+    border: 2px solid $rose-darken;
+    color: $rose-darken;
     
-    border: 2px solid $rose-darker;
-    color: $rose-darker;
-    
-    font-size: 0.9rem;
+    font-size: 1.2rem;
     font-weight: 200;
     padding: 0.5rem 2rem;
     border-radius: 2px;
@@ -46,9 +53,8 @@
 
     transition: 300ms ease-in;
     &:hover{
-        // background-color: $light-pink;
-        // color: $rose;
-        transform: scale(1.1);
+        background-color: $rose-darken;
+        color: $main-txt-light;
     }
 }
 
