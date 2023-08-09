@@ -9,15 +9,12 @@ $light-pink: #f5efeb;
 
 
 $main-txt-dark: #020202;
-$main-txt-dark-lighter: lighter($main-txt-dark, 25%);
+$main-txt-dark-lighter: lighten($main-txt-dark, 20%);
 $main-txt-light: #fbf6ef;
 
 $accent-color: #fd4906;
 $accent-color-lighter: lighten($accent-color, 25%);
 $accent-color-fade: lighten($accent-color, 38%);
-
-
-
 
 
 

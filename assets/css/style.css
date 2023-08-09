@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .logo-area, .room {
+.about, .logo-area, .room, .about-view {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -345,7 +345,6 @@ header {
 }
 
 .hero {
-  min-height: calc(100vh - 8rem);
   height: 100vh;
   position: relative;
   overflow: hidden;
@@ -949,12 +948,15 @@ input:focus, textarea:focus {
   }
 }
 
-.hero {
+.hero-room {
   min-height: 60vh;
+  position: relative;
+  overflow: hidden;
 }
 
 .about {
   min-height: 40vh;
+  padding: 2rem;
   background-color: #fafafa;
 }
 
@@ -964,20 +966,47 @@ input:focus, textarea:focus {
   display: flex;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
-      -ms-flex-flow: column;
-          flex-flow: column;
+      -ms-flex-direction: column;
+          flex-direction: column;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
   width: 70vw;
   font-family: "Tinos", serif;
-  text-align: center;
 }
 
-.about-content-room h2, .about-content-room p {
+.about-content-room h1 {
+  width: 68rem;
+  font-size: 8rem;
+  font-weight: 500;
+  color: #dcdcdc;
+  line-height: 1;
+  text-align: left;
+}
+
+.about-content-room h2 {
+  position: relative;
+  max-width: 60rem;
+  font-size: 2rem;
+  font-weight: 300;
+  color: #333;
+  padding: 5.5rem 0;
+  padding-left: 0px;
+  margin-left: 6.2rem;
+  padding-left: 2.5rem;
+}
+
+.about-content-room h2::before {
+  content: "";
+  width: 6rem;
+  height: 1px;
+  background-color: #0083ae;
+  position: absolute;
+  top: 51%;
+  left: -100px;
+}
+
+.about-content-room p {
   font-size: 1.2rem;
   font-weight: 400;
   width: 80%;
@@ -1083,6 +1112,46 @@ input:focus, textarea:focus {
 
 .room-utility {
   padding-top: 2rem;
+}
+
+.hero-view {
+  height: 60vh;
+  background-image: url(/assets/img/chamande2.jpg);
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+}
+
+.about-view {
+  min-height: 30vh;
+  padding: 3rem;
+  background-color: #fafafa;
+}
+
+.about-content-view {
+  max-width: 80rem;
+  font-family: "Tinos", serif;
+  color: #353535;
+}
+
+.about-content-view .link-return {
+  color: #cb9d75;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+}
+
+.about-content-view h1 {
+  font-size: 5rem;
+  font-weight: 500;
+  margin: 1.5rem 0;
+}
+
+.about-content-view p {
+  width: 80rem;
+  font-size: 1.2rem;
+  font-weight: 400;
+  width: 80%;
+  margin-bottom: 1.2rem;
 }
 
 .card {

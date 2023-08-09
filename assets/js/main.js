@@ -37,7 +37,7 @@ window.onscroll = function() {
 
 
 //*carousel for cards on room.html
-const carouselContainer = document.querySelectorAll('.room-image');
+const carouselContainer = document.querySelectorAll('.carousel-wrap');
 carouselContainer.forEach((container)=> {
 
 

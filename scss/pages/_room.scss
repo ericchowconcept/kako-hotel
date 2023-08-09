@@ -1,31 +1,56 @@
 
-
-
-.hero{
+.hero-room{
     min-height: 60vh;
+    position: relative;
+    overflow: hidden;
 }
 //*about-section
 .about{
     min-height: 40vh;
     @extend %section;
-    
+    padding: 2rem;
     background-color: $grey;
 }
 
 .about-content-room{
 
     display: flex;
-    flex-flow: column;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
     width: 70vw;
-    
-
     font-family: $main-font;
-    text-align: center;
-   
+  
+    h1{
+        width: 68rem;
+        font-size: 8rem;
+        font-weight: 500;
+        color: #dcdcdc;
+        line-height: 1;
+        text-align: left;
+    }
+    h2 {
+        position: relative;
+        max-width: 60rem;
+        font-size: 2rem;
+        font-weight: 300;
+        color: #333;
+        padding: 5.5rem 0;
+        padding-left: 0px;
+        margin-left: 6.2rem;
+        padding-left: 2.5rem;
+      }
 
-    h2, p{
+    h2::before {
+    content: "";
+    width: 6rem;
+    height: 1px;
+    background-color: #0083ae;
+    position: absolute;
+    top: 51%;
+    left: -100px;
+    }
+
+    p{
         font-size: 1.2rem;
         font-weight: 400;
         width: 80%;

@@ -10,7 +10,6 @@
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css">
     <link rel='stylesheet' href='https://cdn-uicons.flaticon.com/uicons-brands/css/uicons-brands.css'>
     <script defer src="/assets/js/main.js"></script>
-   
     <title>La Ferme Rose - Hôtel de charme à Moustier-Sainte-Marie</title>
 </head>
 <body>
@@ -23,7 +22,7 @@
             </div>
         </a>
         <div class="menu">
-            <a href="#" class="btn" target=_blank>RESERVER</a>
+            <a href="#" class="btn btn-header" target=_blank>RESERVER</a>
             <button class="burger" aria-controls="primary-navigation" aria-expanded="false">
                 <span class="line1"></span>
                 <span class="line2"></span>
@@ -33,7 +32,7 @@
         <!-- <img src="./assets/img/menu-burger.png" alt="menu-burger" class="burger"> -->
         <nav id="primary-navigation" class="primary-navigation">
             <a href="#" class="active">HÔTEL</a>
-            <a href="#about" class="nav-link">CHAMBRES</a>
+            <a href="#about" class="nav-link">Séjour</a>
             <a href="#experience" class="nav-link">SERVICES</a>
             <a href="#experience" class="nav-link">EXPERIENCE</a>
             <a href="#experience" class="nav-link">GALLERY</a>
@@ -41,18 +40,19 @@
         </nav>
     </header>
     <main>
-        <div id="hero" class="hero">
-            <video autoplay muted loop>
+        <div id="hero" class="hero-room">
+            <video class="video-hero" autoplay muted loop>
                 <source src="/assets/img/rooms-v2.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas ce vidéo tag
             </video>
         </div>
         <div id="about" class="about">
             <div class="about-content-room">
-                <h2>La Ferme Rose offre une expérience hôtelière singulière : douze chambres, chacune conçue de manière individuelle avec de ravissantes salles de bains entièrement couvertes de <span>faïence de Salernes</span>. Dans cette atmosphère unique et inattendue, laissez-vous porter par une ambiance détendue.</h2>
-              
+                <h1>Séjour</h1>
                 
-                <p>Que ce soit dans l'une de nos chambres, vous ressentirez une sensation de bien-être immense dès que vous entrerez. Toutes nos chambres sont équipées d'un lit king-size, de la climatisation, du Wi-Fi et d'un minibar... Si vous n'étiez pas à Moustiers, vous auriez à peine envie de quitter votre chambre.</p>
+                <h2>La Ferme Rose offre une expérience hôtelière singulière : douze chambres, chacune conçue de manière individuelle avec de ravissantes salles de bains entièrement couvertes de <span>faïence de Salernes</span>. </h2>
+                <p>Dans cette atmosphère unique et inattendue, laissez-vous porter par une ambiance détendue.Que ce soit dans l'une de nos chambres, vous ressentirez une sensation de bien-être immense dès que vous entrerez. </p>
+                <p>Toutes nos chambres sont équipées d'un lit king-size, de la climatisation, du Wi-Fi et d'un minibar... Si vous n'étiez pas à Moustiers, vous auriez à peine envie de quitter votre chambre.</p>
             </div>
         </div>
         <section id="experience" class="room">
@@ -66,7 +66,7 @@
                 </div> -->
                 <div class="room-list-wrapper">
                     <div class="room-item">
-                        <div class="room-image">
+                        <div class="room-image carousel-wrap">
                             <div class="carousel">
                                 <button class="carousel__button carousel__button--left is-hidden">
                                     <img src="/assets/img/icons/previous-fill.png" alt="">
@@ -128,12 +128,12 @@
                                 </div>
                             </div>
                             <div class="room-utility">
-                                <a href="#" class="btn-light">En savoir plus</a>   
+                                <a href="preview.html" class="btn btn-info">En savoir plus</a>   
                             </div>
                         </div>
                     </div>
                     <div class="room-item">
-                        <div class="room-image">
+                        <div class="room-image carousel-wrap">
                             <div class="carousel">
                                 <button class="carousel__button carousel__button--left is-hidden">
                                     <img src="/assets/img/icons/previous-fill.png" alt="">
@@ -195,7 +195,7 @@
                                 </div>
                             </div>
                             <div class="room-utility">
-                                <a href="#" class="btn-light">En savoir plus</a>   
+                                <a href="#" class="btn btn-info">En savoir plus</a>   
                             </div>
                         </div>
                     </div>
@@ -205,12 +205,56 @@
         
     </main>
     <footer>
-        <div class="social">
-            <i class="fi fi-brands-github"></i>
-            <i class="fi fi-brands-instagram"></i>
-            <i class="fi fi-brands-linkedin"></i>
+        <div class="footer-wrap">
+            <div class="footer-columns">
+                <div class="col-footer one">
+                    <a href="#" class="btn btn-rose" target=_blank>RESERVER</a>
+                    <div class="contact-info">
+                        <p>Chem. de Peyrengue, 04360 Moustiers-Sainte-Marie</p>
+                        <div class="mail contact-icon">
+                            <i class="fi fi-rs-envelope"></i>
+                            <p>contact@lafermerose.com</p>
+                        </div>
+                        <div class="phone contact-icon">
+                            <i class="fi fi-rs-phone-call"></i>
+                            <p> 04 92 75 75 75</p>
+                        </div>
+                        <a href="https://goo.gl/maps/Ac1SdcGsKVWnsL4P8" class="social-icon"><i class="fi fi-brands-google"></i></a>
+                        <a href="https://www.tripadvisor.fr/Hotel_Review-g445024-d270587-Reviews-La_Ferme_Rose-Moustiers_Sainte_Marie_Digne_les_Bains_Alpes_de_Haute_Provence_Provence_A.html?m=19905" class="social-icon"><i class="fi fi-brands-tripadvisor"></i></a>
+                    </div>
+                </div>
+                <div class="col-footer two">
+                    <div class="site-map-wrap">
+                        <ul class="site-map">
+                            <li><a href="index.html">Accueil</a></li>
+                            <li><a href="/assets/view/room.html">Chambres</a></li>
+                            <li><a href="">Expérience</a></li>
+                            <li><a href="">Moustier</a></li>
+                            <li><a href="">Gallery</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-footer two">
+                    <div class="site-map-wrap">
+                        <ul class="site-map">
+                            <li><a href="">Notre histoire</a></li>
+                            <li><a href="">Contactez nous</a></li>
+                            <li><a href="">Mention Légale</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="col-footer three">
+                    <a href="#" class="logo-footer">
+                        <img src="/assets/img/final1-01.png" alt="ferme-logo">
+                        <div class="logo-footer-name">
+                            <h1>La ferme rose</h1>
+                            <p>Moustier Sainte Marie</p>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <p class="developer"> Designed & Developed by Eric Chow</p>
         </div>
-            <p> Designed & Developed by Eric Chow</p>
     </footer>
 </body>
 </html>

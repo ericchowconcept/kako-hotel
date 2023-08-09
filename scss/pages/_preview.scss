@@ -1,0 +1,44 @@
+.hero-view{
+    height: 60vh;
+    background-image: url(/assets/img/chamande2.jpg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: cover;
+}
+.about-view{
+    min-height: 30vh;
+    @extend %section;
+    padding: 3rem;
+    background-color: $grey;
+    
+}
+
+.about-content-view {
+    max-width: 80rem;
+    font-family: $main-font;
+    color: $main-txt-dark-lighter;
+
+    .link-return {
+        color: $rose-darken;
+        font-family: $title-font;
+        font-weight: 400;
+    }
+
+    h1{
+        font-size: 5rem;
+        font-weight: 500;
+        
+        margin: 1.5rem 0;
+    }
+    p{
+        width: 80rem;
+        font-size: 1.2rem;
+        font-weight: 400;
+        width: 80%;
+        margin-bottom: 1.2rem;
+    }
+}
+
+
+
+
