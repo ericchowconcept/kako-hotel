@@ -1,3 +1,4 @@
+//*hero section
 .hero-view{
     height: 60vh;
     background-image: url(/assets/img/chamande2.jpg);
@@ -5,10 +6,13 @@
     background-position: center;
     background-size: cover;
 }
+
+//*about section
 .about-view{
-    min-height: 30vh;
+    min-height: 40vh;
     @extend %section;
-    padding: 3rem;
+    padding: 2rem 3rem;
+
     background-color: $grey;
     
 }
@@ -38,6 +42,154 @@
         margin-bottom: 1.2rem;
     }
 }
+
+//*room details section
+.room-detail {
+    @extend %section;
+    background-color: $light-pink;
+    min-height: 50vh;
+    padding: 3rem;
+    
+}
+.room-detail-wrap {
+    max-width: 80rem;
+    font-family: $main-font;
+    color: $main-txt-dark-lighter;
+    h2 {
+        font-size: 3rem;
+        font-weight: 500;
+        margin: 1.5rem 0;
+    }
+    h3 {
+        font-size: 2rem;
+        font-weight: 500;
+
+    }
+
+    h4 {
+        font-size: 1.2rem;
+        font-weight: 400;
+        
+    }
+    p{
+        width: 80rem;
+        font-size: 1.2rem;
+        font-weight: 300;
+        width: 80%;
+        margin-bottom: 1.2rem;
+    }
+   
+ }
+ .room-highlight {
+    margin-top: 3rem;
+    display: flex;
+    gap: 15rem;
+    color: $main-txt-dark-lighten;
+
+
+ }
+
+ .room-character {
+    display: flex;
+    gap: 2rem;
+ }
+
+ .room-character li, .room-service li{
+        list-style: none;
+        margin-bottom: 1rem;
+        display: flex;
+        p {
+            font-size: 1rem;
+        }
+ }
+
+ .room-character-list, .room-service-list{
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    .room-service-wrap {
+        display: flex;
+        gap: 10rem;
+    }
+ }
+
+
+ .room-icon {
+    margin-right: 1rem;
+    width: 1.8rem;
+    height: 1.8rem;
+ }
+
+//*photo gallery
+
+.room-photo-gallery {
+    @extend %section;
+    background-color: $grey;
+    min-height: 80vh;
+    padding: 3rem;
+}
+
+.gallery-wrap{
+    max-width: 100rem;
+    font-family: $main-font;
+    color: $main-txt-dark-lighter;
+    display: flex;
+    gap: 4rem;
+   
+    h2{
+        position: relative;
+        font-weight: 500;
+        font-size: 2.5rem;
+        text-align: left;
+        margin-bottom: 3rem;
+    }
+    h2::before {
+        content: "";
+        width: 5rem;
+        height: 2px;
+        background-color: $rose-darken;
+        position: absolute;
+        top: 40%;
+        left: -100px;
+      }
+}
+.photo-gallery {
+    height: 60vh;
+    width: 40vw;
+}
+
+//*suggestion
+
+.suggestion {
+    @extend %section;
+    background-color: $light-pink;
+    min-height: 80vh;
+    padding: 3rem;
+}
+.suggestion-wrap {
+    max-width: 70vw;
+    // margin: auto;
+    font-family: $main-font;
+    color: $main-txt-dark-lighter;
+    h2 {
+        font-size: 5rem;
+        font-weight: 500;
+        margin-bottom: 1rem;
+    }
+}
+
+.scrolling-wrapper{
+    width: 70vw;
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    gap: 2rem;
+
+  }
+
+  .room-item {
+    min-width: 40rem;
+  }
 
 
 

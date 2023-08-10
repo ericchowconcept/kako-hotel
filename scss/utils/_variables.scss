@@ -5,11 +5,14 @@ $rose-darker: darken($rose, 8%);
 $rose-darken: darken($rose, 25%);
 $rose-light: lighten($rose, 5%);
 $rose-lighter: lighten($rose, 20%);
+
 $light-pink: #f5efeb;
+$light-pink-fade: lighten($light-pink, 4%);
 
 
 $main-txt-dark: #020202;
 $main-txt-dark-lighter: lighten($main-txt-dark, 20%);
+$main-txt-dark-lighten: lighten($main-txt-dark, 35%);
 $main-txt-light: #fbf6ef;
 
 $accent-color: #fd4906;
