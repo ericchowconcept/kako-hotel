@@ -1,0 +1,21 @@
+.hero-gallery{
+    height: 35vh;
+    // @extend %section;
+    background-color: $rose;
+
+    display: flex;
+    
+    justify-content: center;
+    align-items: end;
+    font-family: $main-font;
+    color: $main-txt-dark;
+    h1 {
+        font-size: 8rem;
+        font-weight: 400;
+    }
+}
+
+.section-gallery {
+    min-height: 100vh;
+    background-color: $grey;
+}

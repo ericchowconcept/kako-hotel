@@ -25,7 +25,7 @@
 }
 
 
-//* about me section
+//* about section
 
 .about{
     height: 70vh;
@@ -34,6 +34,7 @@
     
     background-color: $grey;
 }
+
 
 
 .about-content{
@@ -59,8 +60,6 @@
     p{
         font-weight: 300;
     } 
-
- 
 }
 
 .tiles{
@@ -75,7 +74,16 @@
     }
 }
 
-
+.about-two {
+    height: 30vh;
+    @extend %section;
+    padding: 3rem;
+    
+    background-color: $grey;
+    .about-content {
+        width: 60vw;
+    }
+}
 
 //* accomodation
 .accomodation{

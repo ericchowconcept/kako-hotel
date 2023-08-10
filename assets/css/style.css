@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .logo-area, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion {
+.about, .about-two, .logo-area, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -33,6 +33,7 @@ h2 {
 }
 
 footer {
+  border-top: 1px solid #eedfd2;
   background-color: #fafafa;
   color: #020202;
   font-family: "Tinos", serif;
@@ -417,6 +418,16 @@ header {
 
 .tiles img {
   width: 2rem;
+}
+
+.about-two {
+  height: 30vh;
+  padding: 3rem;
+  background-color: #fafafa;
+}
+
+.about-two .about-content {
+  width: 60vw;
 }
 
 .accomodation {
@@ -1312,6 +1323,32 @@ input:focus, textarea:focus {
 
 .room-item {
   min-width: 40rem;
+}
+
+.hero-gallery {
+  height: 35vh;
+  background-color: #eedfd2;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: end;
+      -ms-flex-align: end;
+          align-items: end;
+  font-family: "Tinos", serif;
+  color: #020202;
+}
+
+.hero-gallery h1 {
+  font-size: 8rem;
+  font-weight: 400;
+}
+
+.section-gallery {
+  min-height: 100vh;
+  background-color: #fafafa;
 }
 
 .card {
