@@ -139,8 +139,35 @@ dotsNav.addEventListener('click', e => {
 })   
 
 //*overlay carousel
+//the modal/overlay
+let overlay = document.querySelector('.overlay');
 
 
+// let img = document.querySelector('.img-responsive');
+let imgOverlay = document.querySelector('.overlay-content');
+let captionTxt= document.querySelector('.caption');
+let overlayFilter = document.querySelector('.overlay-filter');
+let closeButton = document.querySelector('.close-btn');
+
+//when an image is click,
+//we click at the overlay that was positioned on top of it
+
+overlayFilter.addEventListener('click', () => {
+    // e.preventDefault();
+    // Adds href attribute to variable
+    let imgLocation = this.previousElementSibling.getAttribute('href');
+    
+    console.log(imgLocation);
+
+    // overlay.style.display = "flex";
+    // imgOverlay.src = e.src;
+    // captionTxt.innerHTML = e.alt;
+})
+
+closeButton.addEventListener('click', ()=> {
+    // Fade out the overlay
+    overlay.style.display = "none";
+  });
 
 
 
