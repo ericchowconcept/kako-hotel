@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .about-two, .logo-area, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion {
+.about, .about-two, .logo-area, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1346,9 +1346,240 @@ input:focus, textarea:focus {
   font-weight: 400;
 }
 
+.navigation {
+  padding: 3rem;
+  min-height: 18vh;
+}
+
+.nav-list {
+  --_gap: 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  list-style: none;
+  text-transform: uppercase;
+  font-family: "Inter", sans-serif;
+}
+
+nav li {
+  overflow: hidden;
+  padding: calc(var(--_gap)/2);
+  position: relative;
+}
+
+nav li::after {
+  content: "";
+  left: 0;
+  bottom: 0;
+  height: 3px;
+  width: 100%;
+  position: absolute;
+  background-color: #eedfd2;
+  translate: var(--_translate, 0);
+  scale: var(--_width, 0) 1;
+  -webkit-transition: scale 300ms var(--_scale-delay, 0ms), translate 500ms var(--_translate-delay, 0ms);
+  transition: scale 300ms var(--_scale-delay, 0ms), translate 500ms var(--_translate-delay, 0ms);
+}
+
+nav li:hover {
+  --_width: 1;
+}
+
+nav li:hover + li {
+  --_translate: -100%;
+  --_scale-delay: 300ms;
+  --_tanslate-delay: 200ms;
+}
+
+nav li:has(+ hover) {
+  --_translate: 100%;
+  --_scale-delay: 300ms;
+  --_tanslate-delay: 200ms;
+}
+
+nav a {
+  opacity: 0.7;
+  position: relative;
+}
+
+nav a:hover, a:focus-visible {
+  opacity: 1;
+}
+
 .section-gallery {
   min-height: 100vh;
   background-color: #fafafa;
+  border: 1px solid red;
+}
+
+.image-gallery {
+  background-color: aqua;
+  width: 65vw;
+  padding: 1rem 0 2rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row wrap;
+          flex-flow: row wrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.img-wrapper {
+  width: 25rem;
+  height: 25rem;
+  margin-top: 1rem;
+  position: relative;
+}
+
+.img-wrapper img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.img-overlay {
+  background: rgba(0, 0, 0, 0.7);
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  opacity: 0;
+}
+
+.img-overlay i {
+  color: #fff;
+  font-size: 3em;
+}
+
+.img-overlay:hover {
+  opacity: 1;
+}
+
+#caption {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  color: #ccc;
+  padding: 10px 0;
+  height: 150px;
+}
+
+.overlay {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  /* Hidden by default */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+}
+
+/* Modal Content (Image) */
+.overlay-content {
+  margin: 0 2rem;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+/* Add Animation - Zoom in the Modal */
+.overlay-content, .caption {
+  -webkit-animation-name: zoom;
+          animation-name: zoom;
+  -webkit-animation-duration: 0.6s;
+          animation-duration: 0.6s;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* The Close Button */
+.close-btn {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 2.5rem;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.prevButton, .nextButton {
+  color: #bbb;
+  font-size: 2.5rem;
+  font-weight: bold;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
 }
 
 .card {
