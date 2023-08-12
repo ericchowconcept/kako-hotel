@@ -139,35 +139,52 @@ dotsNav.addEventListener('click', e => {
 })   
 
 //*overlay carousel
-//the modal/overlay
-let overlay = document.querySelector('.overlay');
+//store all of the images in variable image
+const images = document.querySelectorAll('.img-responsive');
 
-
-// let img = document.querySelector('.img-responsive');
-let imgOverlay = document.querySelector('.overlay-content');
-let captionTxt= document.querySelector('.caption');
-let overlayFilter = document.querySelector('.overlay-filter');
-let closeButton = document.querySelector('.close-btn');
-
-//when an image is click,
-//we click at the overlay that was positioned on top of it
-
-overlayFilter.addEventListener('click', () => {
-    // e.preventDefault();
-    // Adds href attribute to variable
-    let imgLocation = this.previousElementSibling.getAttribute('href');
-    
-    console.log(imgLocation);
-
-    // overlay.style.display = "flex";
-    // imgOverlay.src = e.src;
-    // captionTxt.innerHTML = e.alt;
+//run a foreach through each image
+images.forEach((img)=> {
+    img.addEventListener('click', (e)=> {
+        //store src of the image in imgSrc
+        let imgSrc = e.target.src;
+        imgModal(imgSrc);
+    })
 })
 
-closeButton.addEventListener('click', ()=> {
-    // Fade out the overlay
-    overlay.style.display = "none";
-  });
+//creating the modal
+
+let imgModal = (src) => {
+    const modal = document.createElement("div");
+    modal.classList.add('modal');
+    //add the modal to the parent element with <div class="image-gallery">
+    document.querySelector('.image-gallery').append(modal);
+    
+    //adding image to modal
+    const newImage = document.createElement("img");
+    newImage.setAttribute("src", src);
+    
+    
+    //creating the close button
+    const closeBtn = document.createElement("i");
+    closeBtn.setAttribute("class", "bi bi-x closeBtn");
+    
+    //close function
+    closeBtn.addEventListener('click', ()=> {
+        modal.remove();
+    })
+
+    modal.append(newImage, closeBtn);
+}
+
+
+
+
+
+
+
+
+
+
 
 
 
