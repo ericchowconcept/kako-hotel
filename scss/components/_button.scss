@@ -14,7 +14,8 @@
 
     transition: 300ms ease-in;
     &:hover{
-        background-color: $grey;
+        color: $main-txt-light;
+        background-color: $main-txt-dark;
         
     }
 }
@@ -25,11 +26,6 @@
     border: 2px solid $main-txt-light;
     color: $main-txt-light;
     transition: 300ms ease-in;
-    &:hover{
-        background-color: $grey;
-        color: $main-txt-dark;
-        
-    }
 }
 
 .btn.btn-info {
