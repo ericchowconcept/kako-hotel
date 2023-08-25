@@ -1,0 +1,124 @@
+.hero-beach {
+    min-height: 70vh;  
+    background-image: url(/assets/img/beach/verdon-hero.jpg);
+    background-position: bottom;
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.about-beach {
+    @extend %section;
+    padding-top: 4rem;
+    min-height: 30vh;
+    background-color: $grey;
+    font-family: $main-font;
+}
+
+.about-content-beach{
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 60vw;
+
+    h2 {
+        font-size: 2rem;
+        font-weight: 300;
+        position: relative;
+    }
+
+    h2:before {
+        content: "";
+        width: 6rem;
+        height: 2px;
+        background-color: $rose;
+        position: absolute;
+        top: 51%;
+        left: -110px;
+    }
+
+
+
+    p{
+        font-size: 1rem;
+        font-weight: 400;
+        color: $main-txt-dark;
+        margin: 1rem 0;
+        
+    }
+
+    .btn {
+        margin-top: 1rem;
+    }
+}
+
+.beach-gallery_wrapper {
+    margin-top: 4rem;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    img {
+        width: 25rem;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 2%;
+    }
+}
+.beach-highlight {
+    @extend %section;
+    padding: 2rem;
+    background-color: $grey;
+
+}
+
+.beach-info {
+    width: 30vw;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
+
+
+.beach-crumbs {
+    @extend %section;
+    padding-top: 2rem;
+}
+
+.crumb-title {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    h3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+}
+.crumb-links {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 6rem;
+    
+    background-color: $grey;
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    p {
+        font-size: 1rem;
+    }
+}

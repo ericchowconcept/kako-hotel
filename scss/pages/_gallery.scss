@@ -17,88 +17,104 @@
     @extend %section;
     padding: 3rem;
     min-height: 18vh;
+   
 }
 
 .nav-list {
-    --_gap: 2rem;
     display: flex;
-    
+    gap: 2rem;
     list-style: none;
     text-transform: uppercase;
     font-family: $title-font;
-    
-
+    font-size: 1rem;
 }
 
-nav li {
+.gallery-link {
     overflow: hidden;
-    padding: calc(var(--_gap)/2);  
+    // padding: 1rem 0; /* Adjust the padding for a vertical layout */
     position: relative;
+    color: $main-txt-dark;
 }
 
-nav li::after {
-    content: "";
-    left: 0;
-    bottom: 0;
-    height: 3px;
+.active {
+    color: $rose-darken;
+}
+
+/* Underline hover effect */
+.gallery-link::after {
+    content: '';
+    height: 2px;
     width: 100%;
+    
+    display: block;
+    background: $rose-darken;
     position: absolute;
-    background-color: $rose;
-
-    translate: var(--_translate, 0);
-    scale: var(--_width, 0) 1;
+    left: 0;
+    bottom: -6px;
+    opacity: 0;
+    transition: all 2ms ease-in-out;
+    pointer-events: none;
+   
     
-    transition: 
-    scale 300ms var(--_scale-delay, 0ms), 
-    translate 500ms var(--_translate-delay, 0ms);
-}
-
-nav li:hover{
-    --_width: 1;
-}
-
-
-    nav li:hover + li{
-        --_translate: -100%;
-        --_scale-delay : 300ms;
-        --_tanslate-delay : 200ms;
-    }
+    opacity: 0;
+    transition: all 0.2s ease-in-out;
     
-    nav li:has(+hover) {
-        --_translate: 100%;
-        --_scale-delay : 300ms;
-        --_tanslate-delay : 200ms;
-    }
-
-
-nav a {
-    opacity: 0.7;
-    position: relative;
 }
-nav a:hover, a:focus-visible {
+
+.gallery-link:hover::after {
     opacity: 1;
 }
+
+@media (max-width: 1200px) {
+    .nav-list {
+
+        font-size: 1rem;
+    }
+}
+@media (max-width: 959px) {
+    .nav-list {
+        font-size: 0.87rem; /* Adjust the font size for smaller screens */
+    }
+}
+
+/* Media query for screens 770px and below */
+@media (max-width: 770px) {
+    .nav-list {
+        flex-direction: column;
+        align-items: center;
+        font-size: 0.8rem
+        
+    }
+    /* Other responsive styles as needed */
+}
+
+
+
 
 //*photo-gallery
 .section-gallery {
     @extend %section;
     min-height: 100vh;
     background-color: $grey;
-    border: 1px solid red;
+    
 }
 
 .image-gallery {
-    background-color: aqua;
-    width: 65vw;
+    
+    width: 80%;
     padding: 1rem 0 2rem;
-    display: flex;
+    display: none;
     flex-flow: row wrap;
     justify-content: space-between;
     
 }
 
+.active {
+    display: flex;
+}
+
 .img-wrapper {
-    width: 25rem;
+    width: calc(33% - 1rem);
     height: 25rem;
     margin-top: 1rem;
     position: relative;
@@ -110,43 +126,34 @@ nav a:hover, a:focus-visible {
         object-fit: cover;
     }
 }
-//incase if i need to add a filter
-// .overlay-filter {
-//     background: rgba(0,0,0,0.7);
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     top: 0;
-//     left: 0;
-//     display: flex;
-//     justify-content: center;
-//     align-items: center;
-//     cursor: pointer;
-//     opacity: 0;
-//     i {
-//     color: #fff;
-//     font-size: 3em;
-//     }
-//     &:hover{
-//         opacity: 1;
-//     }
-// }
 
-#caption {
-    margin: auto;
-    display: block;
-    width: 80%;
-    max-width: 700px;
-    text-align: center;
-    color: #ccc;
-    padding: 10px 0;
-    height: 150px;
-  }
+@media (max-width: 1200px) {
+    .image-gallery {
+        width: 90%; /* Adjust the width to 90% for screens below 1200px */
+    }
+}
+
+@media (max-width: 959px) {
+    .img-wrapper {
+        width: calc(49% - 1rem);
+    }
+}
+
+@media (max-width: 770px) {
+    .image-gallery {
+        justify-content: flex-start;
+    }
+
+    .img-wrapper {
+        width: 100%;
+    }
+}
+
 
   //overlay
 
   .modal {
-    display: flex; /* Hidden by default */
+    display: none; /* Hidden by default */
     justify-content: center;
     align-items: center;
 
@@ -162,6 +169,7 @@ nav a:hover, a:focus-visible {
     background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   
     animation: zoom 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
   }
 
    @keyframes zoom {
@@ -172,8 +180,9 @@ nav a:hover, a:focus-visible {
   }
 
   /* Modal Content (Image) */
-  .modal img {
+  .modal-content {
     width: 50%;
+    height: 80%;
     object-fit: cover;
   }
    
@@ -183,6 +192,7 @@ nav a:hover, a:focus-visible {
     top: 2rem;
     right: 2rem;
     color: rgba(241, 241, 241, 0.87);
+    
     font-size: 2.5rem;
     font-weight: bold;
     z-index: 90;
@@ -196,20 +206,31 @@ nav a:hover, a:focus-visible {
   }
 
   .prevButton, .nextButton {
-    color: #bbb;
+    position: absolute;
+    top: 50%;
+    color: rgba(241, 241, 241, 0.87);
     font-size: 2.5rem;
-    font-weight: bold;
-    transition: 0.3s;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover{
+        color:  rgb(241, 241, 241);
+        transition: 0.3s;
+        scale: 1.5;
+    }
+  }
+
+  .prevButton {
+    left: 22%;
+  }
+
+  .nextButton {
+    right: 22%;
   }
 
  
   
-  .close-btn:hover,
-  .close-btn:focus {
-    color: #bbb;
-    text-decoration: none;
-    cursor: pointer;
-  }
+
 
   
   /* 100% Image Width on Smaller Screens */

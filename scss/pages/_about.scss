@@ -1,0 +1,78 @@
+body {
+    background-color: grey;
+}
+
+nav {
+    height: 100%;
+    width: 0%;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    // background-color: #ffffff;
+    background: rgba(255,255,255, .8);
+    overflow-x: hidden;
+    transition: 0.5s;
+  }
+  
+  .nav-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  nav a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 2.25rem;
+    color: $main-txt-dark;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  nav a:hover, nav a:focus {
+    color: $rose-darken;
+  }
+  
+  nav .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
+
+  .header-icons {
+    margin-top: 2rem;
+    a{
+        display: inline;
+        font-size: 1.5rem;
+    }
+  }
+
+  .language {
+    margin-top: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-height: 450px) {
+    nav a {
+        font-size: 1.25rem;
+    }
+    // nav .closebtn {
+    // font-size: 40px;
+    // top: 15px;
+    // right: 35px;
+    // }
+  }
+
+  .hide {
+    width: 100%;
+  }

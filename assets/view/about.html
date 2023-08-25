@@ -10,103 +10,43 @@
     <title>carousel</title>
 </head>
 <body>
-    <!-- <div class="carousel">
-        <button class="carousel__button carousel__button--left is-hidden">
-            <img src="/assets/img/icons/previous.png" alt="">
-        </button>
-        <div class="carousel__track-container">
-            <ul class="carousel__track">
-                <li class="carousel__slide current-slide">
-                    <img class="carousel__image" src="/assets/img/chamande1.jpg" alt="">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="/assets/img/chamande2.jpg" alt="">
-                </li>
-                <li class="carousel__slide">
-                    <img class="carousel__image" src="/assets/img/piscine-3-booking.jpg" alt="">
-                </li>
-            </ul>
+  <header>
+    <a href="#" class="logo">
+        <img src="assets/img/final1-01.png" alt="ferme-logo">
+        <div class="logo-name">
+            <p>La ferme rose</p>
+            <span>Moustier Sainte Marie</span>
         </div>
-        <button class="carousel__button carousel__button--right">
-            <img src="/assets/img/icons/next.png" alt="">
-        </button>
-        <div class="carousel__nav">
-            <button class="carousel__indicator current-slide"></button>
-            <button class="carousel__indicator"></button>
-            <button class="carousel__indicator"></button>
-        </div>
-    </div> -->
-    section id="gallery">
-  <div class="container">
-    <div id="image-gallery">
-      <div class="row">
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/500"><img src="https://unsplash.it/500" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+    </a>
+    <div class="menu">
+        <a href="#" class="btn btn-header" target=_blank>RESERVER</a>
+        <button class="burger" aria-controls="primary-navigation" aria-expanded="false">
+            <span class="line line1"></span>
+            <span class="line line2"></span>
+            <span class="line line3"></span>
+        </button> 
+    </div>
+    <nav class="overlay">
+        <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+        <div class="nav-content">
+            <a href="#" class="active">Accueil</a>
+            <a href="#about" class="nav-link">Séjour</a>
+            <a href="#experience" class="nav-link">Expérience</a>
+            <a href="#experience" class="nav-link">Gallery</a>
+            <a href="#contact" class="nav-link">Notre histoire</a>
+            <div class="header-icons">
+              <a href="https://goo.gl/maps/Ac1SdcGsKVWnsL4P8" class="social-icon" target="_blank"><i class="fi fi-brands-google"></i></a>
+              <a href="https://www.tripadvisor.fr/Hotel_Review-g445024-d270587-Reviews-La_Ferme_Rose-Moustiers_Sainte_Marie_Digne_les_Bains_Alpes_de_Haute_Provence_Provence_A.html?m=19905" class="social-icon" target="_blank"><i class="fi fi-brands-tripadvisor"></i></a>
             </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/600"><img src="https://unsplash.it/600" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
+            <div class="language">
+              <a href="">EN</a>
+              <hr>
+              <a href="">IT</a>
+              <hr>
+              <a href="">DE</a>
             </div>
-          </div>
         </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/700"><img src="https://unsplash.it/700" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/800"><img src="https://unsplash.it/800" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/900"><img src="https://unsplash.it/900" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/1000"><img src="https://unsplash.it/1000" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/1100"><img src="https://unsplash.it/1100" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-        <div class="col-lg-3 col-md-6 col-sm-6 col-xs-12 image">
-          <div class="img-wrapper">
-            <a href="https://unsplash.it/1200"><img src="https://unsplash.it/1200" class="img-responsive"></a>
-            <div class="img-overlay">
-              <i class="fa fa-plus-circle" aria-hidden="true"></i>
-            </div>
-          </div>
-        </div>
-      </div><!-- End row -->
-    </div><!-- End image gallery -->
-  </div><!-- End container --> 
-</section>
+    </nav>
+</header>
 </body>
 </html>

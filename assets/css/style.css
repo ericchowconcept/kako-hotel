@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .about-bistrot, .bistrot-gallery, .bistrot-story {
+.about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .about-bistrot, .bistrot-gallery, .bistrot-story, .bistrot-crumbs, .about-beach, .beach-highlight, .beach-crumbs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -244,16 +244,16 @@ header:hover .logo-name {
   border-radius: 50px;
 }
 
-.burger:hover span:nth-of-type(1) {
+.burger .cross span .line-1 {
   -webkit-transform: rotate(45deg) translate(6.8px, 6.5px);
           transform: rotate(45deg) translate(6.8px, 6.5px);
 }
 
-.burger:hover span:nth-of-type(2) {
+.burger .cross span .line-2 {
   opacity: 0;
 }
 
-.burger:hover span:nth-of-type(3) {
+.burger .cross span .line-3 {
   -webkit-transform: rotate(-45deg) translate(8px, -8px);
           transform: rotate(-45deg) translate(8px, -8px);
 }
@@ -280,91 +280,83 @@ header:hover .logo-name {
   color: #020202;
 }
 
-.primary-navigation {
-  display: none;
-  color: #fbf6ef;
-  font-family: "Tinos", serif;
-  font-size: 0.9rem;
+.overlay {
+  height: 100%;
+  width: 0%;
+  position: fixed;
+  z-index: 1;
+  top: 5rem;
+  left: 0;
+  background: rgba(255, 255, 255, 0.8);
+  overflow-x: hidden;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.nav-content {
+  position: relative;
+  top: 25%;
+  width: 100%;
+  text-align: center;
+  margin-top: 30px;
+}
+
+.overlay a {
+  padding: 0.5rem;
+  text-decoration: none;
+  font-size: 2.25rem;
+  color: #020202;
+  display: block;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+.overlay a:hover, .overlay a:focus {
+  color: #cb9d75;
+}
+
+.overlay .closebtn {
+  position: absolute;
+  top: 20px;
+  right: 45px;
+  font-size: 60px;
+}
+
+.header-icons {
+  margin-top: 2rem;
+}
+
+.header-icons a {
+  display: inline;
+  font-size: 1.5rem;
+}
+
+.language {
+  margin-top: 2rem;
+  height: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
-  -webkit-box-pack: justify;
-      -ms-flex-pack: justify;
-          justify-content: space-between;
-  padding: 2rem;
-  gap: 3rem;
 }
 
-.primary-navigation .nav-link:hover {
-  color: #fd4906;
-  -webkit-transform: scale(1.1);
-          transform: scale(1.1);
+.language a {
+  font-size: 1.5rem;
 }
 
-.primary-navigation .active {
-  color: #fd4906;
-  font-weight: bold;
-}
-
-.primary-navigation a > [aria-hidden="true"] {
-  font-weight: 700;
-  -webkit-margin-end: 0.5rem;
-          margin-inline-end: 0.5rem;
-}
-
-.primary-navigation {
-  display: none;
-  background-color: rgba(238, 223, 210, 0.107);
-  -webkit-backdrop-filter: blur(1rem);
-          backdrop-filter: blur(1rem);
-  z-index: 990;
-}
-
-.menu-mobile {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: start;
-      -ms-flex-align: start;
-          align-items: start;
-  -webkit-box-pack: start;
-      -ms-flex-pack: start;
-          justify-content: start;
-  gap: 2rem;
-  position: fixed;
-  inset: 0 0 0 40%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  padding: 10rem 3rem;
-  -webkit-animation: slide 300ms linear;
-          animation: slide 300ms linear;
-}
-
-@-webkit-keyframes slide {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
+@media screen and (max-height: 450px) {
+  .overlay a {
+    font-size: 1.25rem;
   }
 }
 
-@keyframes slide {
-  0% {
-    -webkit-transform: translateX(100%);
-            transform: translateX(100%);
-  }
-  100% {
-    -webkit-transform: translateX(0%);
-            transform: translateX(0%);
-  }
+.hide {
+  width: 100%;
 }
 
 .hero {
@@ -652,7 +644,7 @@ header:hover .logo-name {
   margin-bottom: 3rem;
 }
 
-.contact {
+.position {
   min-height: 80vh;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -668,7 +660,7 @@ header:hover .logo-name {
   position: relative;
 }
 
-.contact iframe {
+.position iframe {
   position: absolute;
   width: 100%;
   height: 100%;
@@ -1285,73 +1277,86 @@ header:hover .logo-name {
 }
 
 .nav-list {
-  --_gap: 2rem;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  gap: 2rem;
   list-style: none;
   text-transform: uppercase;
   font-family: "Inter", sans-serif;
+  font-size: 1rem;
 }
 
-nav li {
+.gallery-link {
   overflow: hidden;
-  padding: calc(var(--_gap)/2);
   position: relative;
+  color: #020202;
 }
 
-nav li::after {
-  content: "";
-  left: 0;
-  bottom: 0;
-  height: 3px;
+.active {
+  color: #cb9d75;
+}
+
+/* Underline hover effect */
+.gallery-link::after {
+  content: '';
+  height: 2px;
   width: 100%;
+  display: block;
+  background: #cb9d75;
   position: absolute;
-  background-color: #eedfd2;
-  translate: var(--_translate, 0);
-  scale: var(--_width, 0) 1;
-  -webkit-transition: scale 300ms var(--_scale-delay, 0ms), translate 500ms var(--_translate-delay, 0ms);
-  transition: scale 300ms var(--_scale-delay, 0ms), translate 500ms var(--_translate-delay, 0ms);
+  left: 0;
+  bottom: -6px;
+  opacity: 0;
+  -webkit-transition: all 2ms ease-in-out;
+  transition: all 2ms ease-in-out;
+  pointer-events: none;
+  opacity: 0;
+  -webkit-transition: all 0.2s ease-in-out;
+  transition: all 0.2s ease-in-out;
 }
 
-nav li:hover {
-  --_width: 1;
-}
-
-nav li:hover + li {
-  --_translate: -100%;
-  --_scale-delay: 300ms;
-  --_tanslate-delay: 200ms;
-}
-
-nav li:has(+ hover) {
-  --_translate: 100%;
-  --_scale-delay: 300ms;
-  --_tanslate-delay: 200ms;
-}
-
-nav a {
-  opacity: 0.7;
-  position: relative;
-}
-
-nav a:hover, a:focus-visible {
+.gallery-link:hover::after {
   opacity: 1;
+}
+
+@media (max-width: 1200px) {
+  .nav-list {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 959px) {
+  .nav-list {
+    font-size: 0.87rem;
+    /* Adjust the font size for smaller screens */
+  }
+}
+
+/* Media query for screens 770px and below */
+@media (max-width: 770px) {
+  .nav-list {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    font-size: 0.8rem;
+  }
+  /* Other responsive styles as needed */
 }
 
 .section-gallery {
   min-height: 100vh;
   background-color: #fafafa;
-  border: 1px solid red;
 }
 
 .image-gallery {
-  background-color: aqua;
-  width: 65vw;
+  width: 80%;
   padding: 1rem 0 2rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
@@ -1361,8 +1366,14 @@ nav a:hover, a:focus-visible {
           justify-content: space-between;
 }
 
+.active {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+}
+
 .img-wrapper {
-  width: 25rem;
+  width: calc(33% - 1rem);
   height: 25rem;
   margin-top: 1rem;
   position: relative;
@@ -1376,21 +1387,32 @@ nav a:hover, a:focus-visible {
      object-fit: cover;
 }
 
-#caption {
-  margin: auto;
-  display: block;
-  width: 80%;
-  max-width: 700px;
-  text-align: center;
-  color: #ccc;
-  padding: 10px 0;
-  height: 150px;
+@media (max-width: 1200px) {
+  .image-gallery {
+    width: 90%;
+    /* Adjust the width to 90% for screens below 1200px */
+  }
+}
+
+@media (max-width: 959px) {
+  .img-wrapper {
+    width: calc(49% - 1rem);
+  }
+}
+
+@media (max-width: 770px) {
+  .image-gallery {
+    -webkit-box-pack: start;
+        -ms-flex-pack: start;
+            justify-content: flex-start;
+  }
+  .img-wrapper {
+    width: 100%;
+  }
 }
 
 .modal {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
+  display: none;
   /* Hidden by default */
   -webkit-box-pack: center;
       -ms-flex-pack: center;
@@ -1416,6 +1438,8 @@ nav a:hover, a:focus-visible {
   /* Black w/ opacity */
   -webkit-animation: zoom 0.3s ease-in-out;
           animation: zoom 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
 }
 
 @-webkit-keyframes zoom {
@@ -1441,8 +1465,9 @@ nav a:hover, a:focus-visible {
 }
 
 /* Modal Content (Image) */
-.modal img {
+.modal-content {
   width: 50%;
+  height: 80%;
   -o-object-fit: cover;
      object-fit: cover;
 }
@@ -1469,18 +1494,30 @@ nav a:hover, a:focus-visible {
 }
 
 .prevButton, .nextButton {
-  color: #bbb;
+  position: absolute;
+  top: 50%;
+  color: rgba(241, 241, 241, 0.87);
   font-size: 2.5rem;
-  font-weight: bold;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
 }
 
-.close-btn:hover,
-.close-btn:focus {
-  color: #bbb;
-  text-decoration: none;
-  cursor: pointer;
+.prevButton:hover, .nextButton:hover {
+  color: #f1f1f1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  scale: 1.5;
+}
+
+.prevButton {
+  left: 22%;
+}
+
+.nextButton {
+  right: 22%;
 }
 
 /* 100% Image Width on Smaller Screens */
@@ -1502,7 +1539,7 @@ nav a:hover, a:focus-visible {
 .about-bistrot {
   padding: 4rem;
   min-height: 30vh;
-  background-color: #f5efeb;
+  background-color: #fafafa;
   font-family: "Tinos", serif;
 }
 
@@ -1541,7 +1578,7 @@ nav a:hover, a:focus-visible {
 
 .bistrot-gallery {
   padding: 2rem;
-  background-color: #f5efeb;
+  background-color: #fafafa;
 }
 
 .bistrot-carousel {
@@ -1552,7 +1589,7 @@ nav a:hover, a:focus-visible {
 .bistrot-story {
   min-height: 50vh;
   padding: 5rem;
-  background-color: #f5efeb;
+  background-color: #fafafa;
 }
 
 .story-wrapper {
@@ -1596,6 +1633,212 @@ nav a:hover, a:focus-visible {
 
 .story-carousel {
   height: 30rem;
+}
+
+.bistrot-crumbs {
+  padding-top: 2rem;
+}
+
+.crumb-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.crumb-title h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.crumb-links {
+  width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 5rem;
+  background-color: #f5efeb;
+}
+
+.crumb-links h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.crumb-links p {
+  font-size: 1rem;
+}
+
+.hero-beach {
+  min-height: 70vh;
+  background-image: url(/assets/img/beach/verdon-hero.jpg);
+  background-position: bottom;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+}
+
+.about-beach {
+  padding-top: 4rem;
+  min-height: 30vh;
+  background-color: #fafafa;
+  font-family: "Tinos", serif;
+}
+
+.about-content-beach {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  width: 60vw;
+}
+
+.about-content-beach h2 {
+  font-size: 2rem;
+  font-weight: 300;
+  position: relative;
+}
+
+.about-content-beach h2:before {
+  content: "";
+  width: 6rem;
+  height: 2px;
+  background-color: #eedfd2;
+  position: absolute;
+  top: 51%;
+  left: -110px;
+}
+
+.about-content-beach p {
+  font-size: 1rem;
+  font-weight: 400;
+  color: #020202;
+  margin: 1rem 0;
+}
+
+.about-content-beach .btn {
+  margin-top: 1rem;
+}
+
+.beach-gallery_wrapper {
+  margin-top: 4rem;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.beach-gallery_wrapper img {
+  width: 25rem;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2%;
+}
+
+.beach-highlight {
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.beach-info {
+  width: 30vw;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.beach-crumbs {
+  padding-top: 2rem;
+}
+
+.crumb-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.crumb-title h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.crumb-links {
+  width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6rem;
+  background-color: #fafafa;
+}
+
+.crumb-links h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.crumb-links p {
+  font-size: 1rem;
 }
 
 .card {

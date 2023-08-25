@@ -29,19 +29,32 @@
                 <span class="line line3"></span>
             </button> 
         </div>
-        <!-- <img src="./assets/img/menu-burger.png" alt="menu-burger" class="burger"> -->
-        <nav id="primary-navigation" class="primary-navigation">
-            <a href="#" class="active">Accueil</a>
-            <a href="#about" class="nav-link">Séjour</a>
-            <a href="#experience" class="nav-link">Expérience</a>
-            <a href="#experience" class="nav-link">Gallery</a>
-            <a href="#contact" class="nav-link">Notre histoire</a>
+        <nav class="overlay">
+            <!-- <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a> -->
+            <div class="nav-content">
+                <a href="index.html" class="active">Accueil</a>
+                <a href="/assets/view/room.html" class="nav-link">Séjour</a>
+                <a href="#experience" class="nav-link">Expérience</a>
+                <a href="/assets/view/gallery.html" class="nav-link">Gallery</a>
+                <a href="/assets/view/about.html" class="nav-link">Notre histoire</a>
+                <div class="header-icons">
+                  <a href="https://goo.gl/maps/Ac1SdcGsKVWnsL4P8" class="social-icon" target="_blank"><i class="fi fi-brands-google"></i></a>
+                  <a href="https://www.tripadvisor.fr/Hotel_Review-g445024-d270587-Reviews-La_Ferme_Rose-Moustiers_Sainte_Marie_Digne_les_Bains_Alpes_de_Haute_Provence_Provence_A.html?m=19905" class="social-icon" target="_blank"><i class="fi fi-brands-tripadvisor"></i></a>
+                </div>
+                <div class="language">
+                  <a href="">EN</a>
+                  <hr>
+                  <a href="">IT</a>
+                  <hr>
+                  <a href="">DE</a>
+                </div>
+            </div>
         </nav>
     </header>
     <main>
         <div id="hero" class="hero">
-            <!-- add  -->
-            <video loop autoplay muted class="video-hero">
+            <!-- add loop autoplay -->
+            <video  muted class="video-hero">
                 <source src="/assets/img/hotel-fill.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas ce vidéo tag
             </video>
@@ -60,8 +73,8 @@
             </div>
         </div>
         <div class="bar-salon">
-            <!-- add  -->
-            <video loop autoplay muted class="video-bar">
+            <!-- add autoplay loop muted-->
+            <video    class="video-bar">
                 <source src="/assets/img/bar-salon.mp4" type="video/mp4">
                 Votre navigateur ne supporte pas ce vidéo tag
             </video>
@@ -95,7 +108,7 @@
                         <div class="wrap-info-experience odd">
                             <h3>Gorge du verdon</h3>
                             <p>Explorez les merveilleux paysages des Gorges du Verdon en toute liberté grâce à notre <strong>location de bateaux électriques.</strong> Naviguez à votre rythme, imprégnez-vous de la beauté naturelle qui vous entoure et créez des souvenirs inoubliables le long de la rivière. </p>
-                            <a href="#" class="btn btn-rose">En savoir plus</a>   
+                            <a href="/assets/view/kako-beach.html" class="btn btn-rose">En savoir plus</a>   
                         </div>  
                     </div>
                 </div>
@@ -112,7 +125,7 @@
                 </div>
             </div>
         </div> 
-        <div id="contact" class="contact">
+        <div class="position">
             <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d11511.236138750646!2d6.2136022!3d43.8390574!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x12cbee70c76779d7%3A0xad23b0336b12145e!2sH%C3%B4tel%20de%20la%20Ferme%20Rose!5e0!3m2!1sen!2sfr!4v1690386547661!5m2!1sen!2sfr" width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>       
         </div>
     </main>
@@ -162,7 +175,6 @@
                             <li><a href="index.html">Accueil</a></li>
                             <li><a href="/assets/view/room.html">Chambres</a></li>
                             <li><a href="">Expérience</a></li>
-                            <li><a href="">Moustier</a></li>
                             <li><a href="assets/view/gallery.html">Gallery</a></li>
                         </ul>
                     </div>

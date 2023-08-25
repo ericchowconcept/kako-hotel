@@ -32,14 +32,7 @@
             </button> 
         </div>
         <!-- <img src="./assets/img/menu-burger.png" alt="menu-burger" class="burger"> -->
-        <nav id="primary-navigation" class="primary-navigation">
-            <a href="#" class="active">HÔTEL</a>
-            <a href="#about" class="nav-link">Séjour</a>
-            <a href="#experience" class="nav-link">SERVICES</a>
-            <a href="#experience" class="nav-link">EXPERIENCE</a>
-            <a href="#experience" class="nav-link">GALLERY</a>
-            <a href="#contact" class="nav-link">A PROPOS</a>
-        </nav>
+        
     </header>
     <main>
         <div class="hero-gallery">
@@ -48,18 +41,24 @@
         <article class="navigation">
             <nav>
                 <ul class="nav-list">
-                    <li><a href="">Hôtel</a></li>
-                    <li><a href="">Chambres</a></li>
-                    <li><a href="">Bar & Salon</a></li>
-                    <li><a href="">La collection de Kako</a></li>
-                    <li><a href="">Kako bistrot</a></li>
-                    <li><a href="">Kako beach</a></li>
-                    <li><a href="">Tout</a></li>
+                    <li><a href="" data-target="hotel" class="gallery-link active">Hôtel</a></li>
+                    <li><a href="" data-target="chambre" class="gallery-link">Chambres</a></li>
+                    <li><a href="" class="gallery-link">Bar & Salon</a></li>
+                    <li><a href="" class="gallery-link">La collection de Kako</a></li>
+                    <li><a href="" class="gallery-link">Kako bistrot</a></li>
+                    <li><a href="" class="gallery-link">Kako beach</a></li>
+                    <li><a href="" class="gallery-link">Tout</a></li>
                 </ul>
             </nav>
         </article>
         <section class="section-gallery">
-            <div class="image-gallery">
+            <div class="image-gallery active" id="hotel-gallery">
+                <div class="modal" id="myModal1">
+                    <span class="closeBtn">&times;</span>
+                    <img class="modal-content" src="">
+                    <span class="prevButton">&#8249;</span>
+                    <span class="nextButton">&#8250;</span>
+                </div>
                 <div class="img-wrapper">        
                     <img src="/assets/img/hotel/batiment-1.jpg" class="img-responsive" alt="facade de l'hôtel">     
                 </div>
@@ -89,29 +88,46 @@
                 </div>
                 
             </div>
-        </section>
-    </main> 
-    <!-- <div class="logo-area">
-        <div class="wrap">
-            <div class="logos">
-                <div class="col">
-                    <h4></h4>
-                    <div class="logo-sibling">
-                        <a href="">
-                            <img src="" alt="">
-                            <h5></h5>
-                        </a>
-                    </div>
-                    <div class="logo-sibling">
-                        <a href="">
-                            <img src="" alt="">
-                            <h5></h5>
-                        </a>
-                    </div>
+            <div class="image-gallery" id="chambre-gallery">
+                <div class="modal" id="myModal2">
+                    <span class="closeBtn">&times;</span>
+                    <img class="modal-content" src="">
+                    <span class="prevButton">&#8249;</span>
+                    <span class="nextButton">&#8250;</span>
                 </div>
+                <div class="img-wrapper">        
+                    <img src="https://picsum.photos/200/300" class="img-responsive" alt="facade de l'hôtel">     
+                </div>
+                <div class="img-wrapper">
+                    <img src="https://picsum.photos/200/300" class="img-responsive" alt="facade de l'hôtel">
+                </div>
+                <div class="img-wrapper">
+                    <img src="https://picsum.photos/200/300" class="img-responsive" alt="facade de l'hôtel">
+                </div>
+                <div class="img-wrapper">
+                    <img src="/assets/img/hotel/batiment-7.jpg" class="img-responsive">
+                </div>
+                <div class="img-wrapper">
+                    <img src="/assets/img/hotel/batiment-8.jpg" class="img-responsive">
+                </div>
+                <div class="img-wrapper">
+                    <img src="/assets/img/hotel/batiment-9.jpg" class="img-responsive">
+                </div>
+                <div class="img-wrapper">
+                    <img src="/assets/img/hotel/hotel-1.jpeg" class="img-responsive">
+                </div>
+                <div class="img-wrapper">
+                    <img src="/assets/img/hotel/hotel-2.jpeg" class="img-responsive">
+                </div>
+                <div class="img-wrapper">
+                    <img src="/assets/img/hotel/hotel-2.jpeg" class="img-responsive">
+                </div>
+                
             </div>
-        </div>
-    </div> -->
+        </section>
+        
+    </main> 
+ 
     <footer>
         <div class="footer-wrap">
             <div class="footer-columns">

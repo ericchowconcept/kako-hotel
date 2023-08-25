@@ -11,7 +11,7 @@
     @extend %section;
     padding: 4rem;
     min-height: 30vh;
-    background-color: $light-pink;
+    background-color: $grey;
     font-family: $main-font;
 }
 
@@ -43,7 +43,7 @@
 .bistrot-gallery {
     @extend %section;
     padding: 2rem;
-    background-color: $light-pink;
+    background-color: $grey;
 
 }
 .bistrot-carousel {
@@ -57,7 +57,7 @@
     @extend %section;
     min-height: 50vh;
     padding: 5rem;
-    background-color: $light-pink;
+    background-color: $grey;
     
 }
 .story-wrapper {
@@ -91,4 +91,41 @@
 .story-carousel {
     height: 30rem;
     
+}
+
+.bistrot-crumbs {
+    @extend %section;
+    padding-top: 2rem;
+}
+
+.crumb-title {
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 1rem;
+    h3 {
+        font-size: 2rem;
+        font-weight: 300;
+    }
+
+}
+.crumb-links {
+    width: 100vw;
+    height: 10vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    
+    padding: 5rem;
+    
+    background-color: $light-pink;
+    h4 {
+        font-size: 1.5rem;
+        font-weight: 300;
+    }
+    p {
+        font-size: 1rem;
+    }
 }

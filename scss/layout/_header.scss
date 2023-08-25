@@ -105,24 +105,23 @@ header{
         height: 4px;
         border-radius: 50px;
     }
-    &:hover{
-        span{
-        &:nth-of-type(1){
-            transform: rotate(45deg)
-            translate(6.8px, 6.5px);
-    
-        }
-        &:nth-of-type(2){
-            opacity: 0;
-        }   
-        &:nth-of-type(3){
-            transform: rotate(-45deg) 
-            translate(8px, -8px);
-        }
-        }
-        
+}
+//*when clicked, the burger becomes a cross to indicate a close button
+.burger .cross{
+    span .line-1{
+        transform: rotate(45deg)
+        translate(6.8px, 6.5px);
+
+    }
+    span .line-2{
+        opacity: 0;
+    }   
+    span .line-3{
+        transform: rotate(-45deg) 
+        translate(8px, -8px);
     }
 }
+    
 
 //*for the fixed navbar, integrated with JS
 //header's color to white translucent
@@ -151,68 +150,81 @@ header{
 
 //*navbar within the burger menu
 
-.primary-navigation{
-
-    display: none;
-   
-    color: $main-txt-light;
-    font-family: $main-font;
-    font-size: 0.9rem;
-
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    padding: 2rem;
- 
-    gap: 3rem;
-
-    .nav-link:hover{
-        color: $accent-color;
-        transform: scale(1.1);
-    }
-    .active{
-        color: $accent-color;
-        font-weight: bold;
-    }
-}
-
-.primary-navigation a > [aria-hidden = "true"]{
-    font-weight: 700;
-    margin-inline-end: 0.5rem;
-}
-  
-
-.primary-navigation{
-    display: none;
-    background-color: rgba(238, 223, 210, 0.107);
-    backdrop-filter: blur(1rem);
-    z-index: 990;
-}
-.menu-mobile{
-    display: flex;
-    align-items: start;
-    justify-content: start;
-    gap: 2rem;
-
+.overlay {
+    height: 100%;
+    width: 0%;
     position: fixed;
-    inset: 0 0 0 40%;
-    
+    z-index: 1;
+    top: 5rem;
+    left: 0;
+    // background-color: #ffffff;
+    background: rgba(255,255,255, .8);
+    overflow-x: hidden;
+   
+    transition: 0.5s;
+  }
+  
+  .nav-content {
+    position: relative;
+    top: 25%;
+    width: 100%;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
+  .overlay a {
+    padding: 0.5rem;
+    text-decoration: none;
+    font-size: 2.25rem;
+    color: $main-txt-dark;
+    display: block;
+    transition: 0.3s;
+  }
+  
+  .overlay a:hover, .overlay a:focus {
+    color: $rose-darken;
+  }
+  
+  .overlay .closebtn {
+    position: absolute;
+    top: 20px;
+    right: 45px;
+    font-size: 60px;
+  }
 
-    flex-direction: column;
-    padding: 10rem 3rem;
-    animation: slide 300ms linear;
-} 
-
-
-
-@keyframes slide {
-        0%{
-            transform: translateX(100%);
-        }100%{
-            transform: translateX(0%);
-
-        }
+  .header-icons {
+    margin-top: 2rem;
+    a{
+        display: inline;
+        font-size: 1.5rem;
     }
+  }
+
+  .language {
+    margin-top: 2rem;
+    height: 2rem;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    a {
+        font-size: 1.5rem;
+    }
+  }
+  
+  @media screen and (max-height: 450px) {
+    .overlay a {
+        font-size: 1.25rem;
+    }
+    // nav .closebtn {
+    // font-size: 40px;
+    // top: 15px;
+    // right: 35px;
+    // }
+  }
+
+  .hide {
+    width: 100%;
+  }
     
 
 
