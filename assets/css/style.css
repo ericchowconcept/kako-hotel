@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .about-bistrot, .bistrot-gallery, .bistrot-story, .bistrot-crumbs, .about-beach, .beach-highlight, .beach-crumbs {
+.about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .bistrot-gallery, .bistrot-highlight, .bistrot-crumbs, .about-beach, .beach-highlight, .beach-crumbs {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -1537,8 +1537,21 @@ header:hover .logo-name {
 }
 
 .about-bistrot {
-  padding: 4rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
   min-height: 30vh;
+  padding: 5rem;
   background-color: #fafafa;
   font-family: "Tinos", serif;
 }
@@ -1554,61 +1567,40 @@ header:hover .logo-name {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  width: 70vw;
+  -webkit-box-align: start;
+      -ms-flex-align: start;
+          align-items: start;
+  width: 60vw;
 }
 
 .about-content-bistrot h2 {
   font-size: 2rem;
+  font-weight: 300;
+  position: relative;
+  margin-bottom: 3rem;
 }
 
-.about-content-bistrot p {
-  font-size: 1.2rem;
-  font-weight: 400;
-  color: #020202;
-  margin: 1.2rem 0;
-  text-align: center;
-}
-
-.about-content-bistrot .btn {
-  margin-top: 1rem;
-}
-
-.bistrot-gallery {
-  padding: 2rem;
-  background-color: #fafafa;
-}
-
-.bistrot-carousel {
-  height: 60vh;
-  width: 70vw;
-}
-
-.bistrot-story {
-  min-height: 50vh;
-  padding: 5rem;
-  background-color: #fafafa;
+.about-content-bistrot h2:before {
+  content: "";
+  width: 6rem;
+  height: 2px;
+  background-color: #eedfd2;
+  position: absolute;
+  top: 51%;
+  left: -110px;
 }
 
 .story-wrapper {
-  height: 40vh;
-  width: 80vw;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 15rem;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
 .story-col {
-  width: 35%;
+  width: calc(49% - 1rem);
 }
 
 .left-col {
@@ -1633,6 +1625,37 @@ header:hover .logo-name {
 
 .story-carousel {
   height: 30rem;
+}
+
+.bistrot-gallery {
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.bistrot-carousel {
+  height: 60vh;
+  width: 70vw;
+}
+
+.bistrot-highlight {
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.bistrot-info {
+  width: 30vw;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
 }
 
 .bistrot-crumbs {
@@ -1725,7 +1748,7 @@ header:hover .logo-name {
   position: relative;
 }
 
-.about-content-beach h2:before {
+.about-content-beach h2::before {
   content: "";
   width: 6rem;
   height: 2px;
@@ -1762,11 +1785,41 @@ header:hover .logo-name {
 }
 
 .beach-gallery_wrapper img {
-  width: 25rem;
+  width: 33%;
   aspect-ratio: 1;
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2%;
+}
+
+@media (max-width: 1200px) {
+  .beach-gallery_wrapper {
+    gap: 0;
+    width: 100vw;
+  }
+  .beach-gallery_wrapper img {
+    border-radius: 0;
+  }
+}
+
+@media (max-width: 770px) {
+  .about-content-beach {
+    width: 70vw;
+  }
+  .about-content-beach h2::before {
+    width: 3rem;
+    left: -60px;
+  }
+  .beach-gallery_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .beach-gallery_wrapper img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
 }
 
 .beach-highlight {

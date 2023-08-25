@@ -29,7 +29,7 @@
         position: relative;
     }
 
-    h2:before {
+    h2::before {
         content: "";
         width: 6rem;
         height: 2px;
@@ -62,12 +62,44 @@
     align-items: center;
     gap: 3rem;
     img {
-        width: 25rem;
+        width: 33%;
         aspect-ratio: 1;
         object-fit: cover;
         border-radius: 2%;
     }
 }
+
+@media (max-width: 1200px) {
+    .beach-gallery_wrapper  {
+        gap: 0;
+        width: 100vw;
+        img {
+            
+            border-radius: 0;
+        }
+    }
+}
+
+@media (max-width: 770px) {
+    .about-content-beach {
+        width: 70vw;
+        h2::before {
+            width: 3rem;
+            left: -60px;
+        }
+    }
+    .beach-gallery_wrapper {
+        flex-direction: column ;
+        img {
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+//*position css is in home scss
+
+//* Opening hours
 .beach-highlight {
     @extend %section;
     padding: 2rem;
@@ -84,7 +116,7 @@
     gap: 1rem;
 }
 
-
+//* proposed other links - to Kako's bistrot
 
 .beach-crumbs {
     @extend %section;
