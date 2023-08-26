@@ -1,6 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
-.about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .bistrot-gallery, .bistrot-highlight, .bistrot-crumbs, .about-beach, .beach-highlight, .beach-crumbs {
+.crumbs, .about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .bistrot-gallery, .bistrot-highlight, .about-beach, .beach-highlight {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -30,6 +30,64 @@ a {
 
 h2 {
   font-size: 3.8rem;
+}
+
+.crumbs {
+  padding-top: 2rem;
+}
+
+.crumb-title {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 1rem;
+}
+
+.crumb-title h3 {
+  font-size: 2rem;
+  font-weight: 300;
+}
+
+.crumb-links {
+  width: 100vw;
+  height: 10vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: 6rem;
+  background-color: #fafafa;
+}
+
+.crumb-links h4 {
+  font-size: 1.5rem;
+  font-weight: 300;
+}
+
+.crumb-links p {
+  font-size: 1rem;
+  text-align: center;
+}
+
+@media (max-width: 450px) {
+  .crumb-title h3 {
+    font-size: 1.8rem;
+  }
 }
 
 footer {
@@ -1613,11 +1671,6 @@ header:hover .logo-name {
           flex-flow: column wrap;
 }
 
-.left-col h3 {
-  font-size: 2rem;
-  margin-bottom: 1.5rem;
-}
-
 .left-col p {
   font-size: 1.2rem;
   margin-bottom: 1.5rem;
@@ -1632,9 +1685,27 @@ header:hover .logo-name {
   background-color: #fafafa;
 }
 
-.bistrot-carousel {
-  height: 60vh;
-  width: 70vw;
+.bistrot-gallery_wrapper {
+  margin-top: 4rem;
+  width: 90vw;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 3rem;
+}
+
+.bistrot-gallery_wrapper img {
+  width: 33%;
+  aspect-ratio: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 2%;
 }
 
 .bistrot-highlight {
@@ -1643,7 +1714,7 @@ header:hover .logo-name {
 }
 
 .bistrot-info {
-  width: 30vw;
+  width: 40vw;
   padding: 1rem;
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1658,55 +1729,67 @@ header:hover .logo-name {
   gap: 1rem;
 }
 
-.bistrot-crumbs {
-  padding-top: 2rem;
+@media (max-width: 1200px) {
+  .about-bistrot {
+    padding-bottom: 2rem;
+  }
+  .bistrot-gallery_wrapper {
+    gap: 0;
+    margin-top: 0;
+    width: 100vw;
+  }
+  .bistrot-gallery_wrapper img {
+    border-radius: 0;
+  }
 }
 
-.crumb-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem;
+@media (max-width: 770px) {
+  .about-content-bistrot {
+    width: 80vw;
+  }
+  .about-content-bistrot h2::before {
+    width: 3rem;
+    left: -60px;
+  }
+  .story-wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-flow: column wrap;
+            flex-flow: column wrap;
+  }
+  .story-col {
+    width: calc(100% - 0.8rem);
+    margin-bottom: 1rem;
+  }
+  .bistrot-gallery_wrapper {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  .bistrot-gallery_wrapper img {
+    width: 80%;
+    margin-bottom: 1rem;
+  }
 }
 
-.crumb-title h3 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.crumb-links {
-  width: 100vw;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 5rem;
-  background-color: #f5efeb;
-}
-
-.crumb-links h4 {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.crumb-links p {
-  font-size: 1rem;
+@media (max-width: 450px) {
+  .about-content-bistrot {
+    width: 80vw;
+  }
+  .about-content-bistrot h2 {
+    font-size: 2rem;
+  }
+  .about-content-bistrot h2::before {
+    display: none;
+  }
+  .left-col p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  .bistrot-info {
+    width: 90vw;
+  }
 }
 
 .hero-beach {
@@ -1765,6 +1848,10 @@ header:hover .logo-name {
   margin: 1rem 0;
 }
 
+.about-content-beach .about_msg {
+  color: #5b5b5b;
+}
+
 .about-content-beach .btn {
   margin-top: 1rem;
 }
@@ -1790,6 +1877,27 @@ header:hover .logo-name {
   -o-object-fit: cover;
      object-fit: cover;
   border-radius: 2%;
+}
+
+.beach-highlight {
+  padding: 2rem;
+  background-color: #fafafa;
+}
+
+.beach-info {
+  width: 30vw;
+  padding: 1rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
 }
 
 @media (max-width: 1200px) {
@@ -1822,76 +1930,19 @@ header:hover .logo-name {
   }
 }
 
-.beach-highlight {
-  padding: 2rem;
-  background-color: #fafafa;
-}
-
-.beach-info {
-  width: 30vw;
-  padding: 1rem;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  gap: 1rem;
-}
-
-.beach-crumbs {
-  padding-top: 2rem;
-}
-
-.crumb-title {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 1rem;
-}
-
-.crumb-title h3 {
-  font-size: 2rem;
-  font-weight: 300;
-}
-
-.crumb-links {
-  width: 100vw;
-  height: 10vh;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: column;
-          flex-direction: column;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  padding: 6rem;
-  background-color: #fafafa;
-}
-
-.crumb-links h4 {
-  font-size: 1.5rem;
-  font-weight: 300;
-}
-
-.crumb-links p {
-  font-size: 1rem;
+@media (max-width: 450px) {
+  .about-content-beach {
+    width: 80vw;
+  }
+  .about-content-beach h2 {
+    font-size: 1.8rem;
+  }
+  .about-content-beach h2::before {
+    display: none;
+  }
+  .beach-info {
+    width: 90vw;
+  }
 }
 
 .card {

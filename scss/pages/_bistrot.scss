@@ -60,11 +60,6 @@
     display: flex;
     flex-flow: column wrap;
     
-    h3 {
-        font-size: 2rem;
-        margin-bottom: 1.5rem;
-    }
-
     p {
         font-size: 1.2rem;
         margin-bottom: 1.5rem;
@@ -83,14 +78,21 @@
     background-color: $grey;
 
 }
-.bistrot-carousel {
-    height: 60vh;
-    width: 70vw;
-    
+
+.bistrot-gallery_wrapper {
+    margin-top: 4rem;
+    width: 90vw;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 3rem;
+    img {
+        width: 33%;
+        aspect-ratio: 1;
+        object-fit: cover;
+        border-radius: 2%;
+    }
 }
-
-
-
 
 .bistrot-highlight {
     @extend %section;
@@ -100,7 +102,7 @@
 }
 
 .bistrot-info {
-    width: 30vw;
+    width: 40vw;
     padding: 1rem;
     display: flex;
     flex-flow: column wrap;
@@ -108,39 +110,70 @@
     gap: 1rem;
 }
 
-.bistrot-crumbs {
-    @extend %section;
-    padding-top: 2rem;
+@media (max-width: 1200px) {
+    .about-bistrot {
+        padding-bottom: 2rem;
+    }
+    .bistrot-gallery_wrapper  {
+        gap: 0;
+        margin-top: 0;
+        width: 100vw;
+        img {
+            
+            border-radius: 0;
+        }
+    }
 }
 
-.crumb-title {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    h3 {
-        font-size: 2rem;
-        font-weight: 300;
+@media (max-width: 770px) {
+
+    .about-content-bistrot {
+        width: 80vw;
+        h2::before {
+            width: 3rem;
+            left: -60px;
+        }
     }
 
-}
-.crumb-links {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .story-wrapper {
+        flex-flow: column wrap;
     
-    padding: 5rem;
-    
-    background-color: $light-pink;
-    h4 {
-        font-size: 1.5rem;
-        font-weight: 300;
     }
-    p {
+    .story-col {
+        width: calc(100% - 0.8rem);
+        margin-bottom: 1rem;
+    }
+    .bistrot-gallery_wrapper {
+        flex-direction: column ;
+        img {
+            width: 80%;
+            margin-bottom: 1rem;
+        }
+    }
+}
+
+
+
+
+
+@media (max-width: 450px) {
+    .about-content-bistrot {
+        width: 80vw;
+        h2 {
+            font-size: 2rem;
+        }
+        h2::before {
+           display: none;
+        }
+    }
+    .left-col p {
         font-size: 1rem;
+        margin-bottom: 1.5rem;
+    }
+
+    .bistrot-info {
+        width: 90vw;
+    
     }
 }
+

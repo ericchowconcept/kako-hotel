@@ -49,6 +49,10 @@
         
     }
 
+    .about_msg {
+        color: $main-txt-dark-lighten;
+    }
+
     .btn {
         margin-top: 1rem;
     }
@@ -68,6 +72,27 @@
         border-radius: 2%;
     }
 }
+
+
+//*position css is in home scss
+
+//* Opening hours
+.beach-highlight {
+    @extend %section;
+    padding: 2rem;
+    background-color: $grey;
+
+}
+
+.beach-info {
+    width: 30vw;
+    padding: 1rem;
+    display: flex;
+    flex-flow: column wrap;
+    align-items: center;
+    gap: 1rem;
+}
+
 
 @media (max-width: 1200px) {
     .beach-gallery_wrapper  {
@@ -96,61 +121,22 @@
         }
     }
 }
-
-//*position css is in home scss
-
-//* Opening hours
-.beach-highlight {
-    @extend %section;
-    padding: 2rem;
-    background-color: $grey;
-
-}
-
-.beach-info {
-    width: 30vw;
-    padding: 1rem;
-    display: flex;
-    flex-flow: column wrap;
-    align-items: center;
-    gap: 1rem;
-}
-
-//* proposed other links - to Kako's bistrot
-
-.beach-crumbs {
-    @extend %section;
-    padding-top: 2rem;
-}
-
-.crumb-title {
-    
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    padding: 1rem;
-    h3 {
-        font-size: 2rem;
-        font-weight: 300;
+@media (max-width: 450px) {
+    .about-content-beach {
+        width: 80vw;
+        h2 {
+            font-size: 1.8rem;
+        }
+        h2::before {
+            display: none;
+        }
     }
 
-}
-.crumb-links {
-    width: 100vw;
-    height: 10vh;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
+    .beach-info {
+        width: 90vw;
     
-    padding: 6rem;
-    
-    background-color: $grey;
-    h4 {
-        font-size: 1.5rem;
-        font-weight: 300;
-    }
-    p {
-        font-size: 1rem;
     }
 }
+
+
+
