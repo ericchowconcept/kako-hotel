@@ -1,15 +1,15 @@
-const menuBurger = document.querySelector('.burger');
-const menuNav = document.querySelector('.overlay');
-const btn = document.querySelector('.btn-header');
-const logo = document.querySelector('.logo');
+// const menuBurger = document.querySelector('.burger');
+// const menuNav = document.querySelector('.overlay');
+// const btn = document.querySelector('.btn-header');
+// const logo = document.querySelector('.logo');
 
-menuBurger.addEventListener('click', ()=>{
+// menuBurger.addEventListener('click', ()=>{
 
-    logo.style.textAlign = 'center';
-    btn.style.display = 'none';
-    menuNav.classList.toggle('hide');
-    menuBurger.classList('cross');
-})
+//     logo.style.textAlign = 'center';
+//     btn.style.display = 'none';
+//     menuNav.classList.toggle('hide');
+//     menuBurger.classList('cross');
+// })
 
 //*header when scroll
 
@@ -18,27 +18,27 @@ const btnHeader = document.querySelector('.btn.btn-header')
 const burgerXlines = document.querySelector('.line')
 
 
-//background and color of certain elements changes when scroll
-window.addEventListener('scroll',() => {
-    if (window.scrollY > 0){
-        header.classList.add('fixed');
-    }else {
-        header.classList.remove('fixed');
-    }
-})
+// //background and color of certain elements changes when scroll
+// window.addEventListener('scroll',() => {
+//     if (window.scrollY > 0){
+//         header.classList.add('fixed');
+//     }else {
+//         header.classList.remove('fixed');
+//     }
+// })
 
-let prevScroll = window.scrollY;
-window.onscroll = function() {
-  const currentScroll = window.scrollY;
-  //header disappears after 300px
-  if (prevScroll > currentScroll) {
-    header.style.top = "0";
-  } else {
-     header.style.top = "-7.2rem";
-  }
-  //header reappears when scroll up
-  prevScroll = currentScroll;
-}
+// let prevScroll = window.scrollY;
+// window.onscroll = function() {
+//   const currentScroll = window.scrollY;
+//   //header disappears after 300px
+//   if (prevScroll > currentScroll) {
+//     header.style.top = "0";
+//   } else {
+//      header.style.top = "-7.2rem";
+//   }
+//   //header reappears when scroll up
+//   prevScroll = currentScroll;
+// }
 
 
 
@@ -230,70 +230,6 @@ galleries.forEach((gallery, galleryIndex)=>{
     });
 
 })
-
-
-// // Attach click event listeners to image wrappers
-
-// imageWrappers.forEach((wrapper, index) => {
-//     wrapper.addEventListener('click', () => {
-//         imgModal(imageElements[index].src, index);
-//     });
-// });
-
-// //creating the modal
-
-// let imgModal = (src, currentIndex) => {
-//     const modal = document.createElement("div");
-//     modal.classList.add('modal');
-//     //add the modal to the parent element with <div class="image-gallery">
-//     document.querySelector('.image-gallery').append(modal);
-    
-//     //adding image to modal
-//     const newImage = document.createElement("img");
-//     newImage.setAttribute("src", src);
-    
-    
-//     //creating the close button
-//     const closeBtn = document.createElement("i");
-//     closeBtn.setAttribute("class", "bi bi-x closeBtn");
-
-//     //creating the prev, next button
-//     const prevBtn = document.createElement("i");
-//     prevBtn.setAttribute("class", "bi bi-caret-left-fill prevButton");
-
-//     const nextBtn = document.createElement("i");
-//     nextBtn.setAttribute("class", "bi bi-caret-right-fill nextButton");
-
-    
-//     //close function
-//     closeBtn.addEventListener('click', ()=> {
-//         modal.remove();
-//     })
-
-//     prevBtn.addEventListener('click', () => {
-//         currentIndex = (currentIndex - 1 + imageElements.length) % imageElements.length;
-//         newImage.src = imageElements[currentIndex].src;
-//     });
-    
-//     nextBtn.addEventListener('click', () => {
-//         currentIndex = (currentIndex + 1) % imageElements.length;
-//         newImage.src = imageElements[currentIndex].src;
-//     });
-
-
-//     modal.append(newImage, closeBtn, prevBtn, nextBtn);
-
-// }
-
-
-
-
-
-
-
-
-
-
 
 
 

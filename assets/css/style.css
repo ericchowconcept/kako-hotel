@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@200;300;400;500;600;700&family=Tinos:ital,wght@0,400;0,700;1,400;1,700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500;600&family=Lato:wght@100;300;400;700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Neuton:ital,wght@0,200;0,300;0,400;0,700;0,800;1,400&display=swap");
 .crumbs, .about, .about-two, .room, .about-view, .room-detail, .room-photo-gallery, .suggestion, .navigation, .section-gallery, .bistrot-gallery, .bistrot-highlight, .about-beach, .beach-highlight {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -1469,126 +1470,11 @@ header:hover .logo-name {
   }
 }
 
-.modal {
-  display: none;
-  /* Hidden by default */
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
-  position: fixed;
-  /* Stay in place */
-  z-index: 1;
-  /* Sit on top */
-  top: 0;
-  right: 0;
-  width: 100%;
-  /* Full width */
-  height: 100%;
-  /* Full height */
-  overflow: auto;
-  /* Enable scroll if needed */
-  background-color: black;
-  /* Fallback color */
-  background-color: rgba(0, 0, 0, 0.9);
-  /* Black w/ opacity */
-  -webkit-animation: zoom 0.3s ease-in-out;
-          animation: zoom 0.3s ease-in-out;
-  -webkit-transition: all 0.5s ease-in-out;
-  transition: all 0.5s ease-in-out;
-}
-
-@-webkit-keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-@keyframes zoom {
-  from {
-    -webkit-transform: scale(0);
-            transform: scale(0);
-  }
-  to {
-    -webkit-transform: scale(1);
-            transform: scale(1);
-  }
-}
-
-/* Modal Content (Image) */
-.modal-content {
-  width: 50%;
-  height: 80%;
-  -o-object-fit: cover;
-     object-fit: cover;
-}
-
-/* The Close Button */
-.closeBtn {
-  position: absolute;
-  top: 2rem;
-  right: 2rem;
-  color: rgba(241, 241, 241, 0.87);
-  font-size: 2.5rem;
-  font-weight: bold;
-  z-index: 90;
-  -webkit-transition: 0.3s ease-in-out;
-  transition: 0.3s ease-in-out;
-  cursor: pointer;
-}
-
-.closeBtn:hover {
-  color: #f1f1f1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  scale: 1.5;
-}
-
-.prevButton, .nextButton {
-  position: absolute;
-  top: 50%;
-  color: rgba(241, 241, 241, 0.87);
-  font-size: 2.5rem;
-  -webkit-transform: translateY(-50%);
-          transform: translateY(-50%);
-  -webkit-transition: all 0.3s ease;
-  transition: all 0.3s ease;
-  cursor: pointer;
-}
-
-.prevButton:hover, .nextButton:hover {
-  color: #f1f1f1;
-  -webkit-transition: 0.3s;
-  transition: 0.3s;
-  scale: 1.5;
-}
-
-.prevButton {
-  left: 22%;
-}
-
-.nextButton {
-  right: 22%;
-}
-
-/* 100% Image Width on Smaller Screens */
-@media only screen and (max-width: 700px) {
-  .modal-content {
-    width: 100%;
-  }
-}
-
 .hero-bistrot {
   min-height: 70vh;
-  background-image: url(/assets/img/facade2.jpg);
-  background-position: bottom;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(20, 20, 20, 0.261))), url(/assets/img/bistrot-gallery/bistrot-terrace.png);
+  background-image: linear-gradient(rgba(20, 20, 20, 0.261)), url(/assets/img/bistrot-gallery/bistrot-terrace.png);
+  background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
@@ -1945,6 +1831,373 @@ header:hover .logo-name {
   }
 }
 
+.bis-body {
+  font-family: "Neuton", serif;
+}
+
+.header-bistrot {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  background: transparent;
+  z-index: 1;
+}
+
+.menu-bistrot {
+  list-style: none;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 2rem;
+  padding: 2rem 1.2rem;
+  font-family: "Neuton", serif;
+  text-transform: uppercase;
+}
+
+.menu-bistrot .menu-bistrot_link {
+  font-weight: 500;
+  font-size: 1.8rem;
+  color: #fff;
+}
+
+.slider {
+  position: fixed;
+  top: 50%;
+  right: 20px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 20px;
+  z-index: 1;
+  -webkit-transition: all 3ms ease-in-out;
+  transition: all 3ms ease-in-out;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background-color: #ccc;
+  cursor: pointer;
+}
+
+.dot.active {
+  background-color: #ff6000;
+  width: 0.8rem;
+  height: 0.8rem;
+}
+
+.dot.white {
+  background-color: #fff;
+}
+
+.language-active {
+  font-weight: bold;
+}
+
+.hero-bis {
+  height: 100vh;
+  background-image: -webkit-gradient(linear, left top, left bottom, from(rgba(0, 0, 0, 0.2))), url(/assets/img/bistrot-gallery/bistrot-terrace.png);
+  background-image: linear-gradient(rgba(0, 0, 0, 0.2)), url(/assets/img/bistrot-gallery/bistrot-terrace.png);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  font-family: "Neuton", serif;
+  text-transform: uppercase;
+  position: relative;
+}
+
+.hero-center {
+  color: #cac6c3;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  gap: 1rem;
+}
+
+.hero-center h1 {
+  font-size: 6rem;
+  font-weight: 500;
+}
+
+.hero-center h2 {
+  font-family: "Inter", sans-serif;
+  font-size: 3rem;
+  font-weight: 400;
+}
+
+.hero-center p {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+}
+
+.hero-bottom {
+  font-family: "Inter", sans-serif;
+  font-size: 1rem;
+  color: #cac6c3;
+  margin-bottom: 2rem;
+  position: absolute;
+  bottom: 5%;
+}
+
+.intro {
+  background-color: #eedfd2;
+  color: #ff6000;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  font-family: "Neuton", serif;
+}
+
+.intro-center {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  max-width: 65%;
+  text-align: center;
+}
+
+.intro-center h3 {
+  text-transform: uppercase;
+  text-align: center;
+  margin-bottom: 1rem;
+  font-size: 4.2rem;
+  font-weight: 700;
+}
+
+.intro-center h3 span {
+  font-weight: 300;
+  font-size: 3rem;
+}
+
+.intro-center p {
+  line-height: 2.5rem;
+  font-size: 1.5rem;
+  width: 65%;
+}
+
+.intro-center a {
+  color: #ff6000;
+  font-weight: 600;
+}
+
+.photo {
+  background-color: #eedfd2;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.photo img {
+  width: 100%;
+  height: 100%;
+  -o-object-fit: cover;
+     object-fit: cover;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.photo_grid {
+  width: 80vw;
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 10px;
+  -ms-grid-columns: (minmax(18rem, 1fr))[auto-fit];
+      grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
+  grid-auto-rows: 17rem;
+  grid-auto-flow: dense;
+}
+
+.photo_grid .wide {
+  grid-column: span 2;
+}
+
+.photo_grid .tall {
+  grid-row: span 2;
+}
+
+.photo_grid .big {
+  grid-column: span 2;
+  grid-row: span 2;
+}
+
+.bis-contact_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+}
+
+.bis-contact_info h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.bis-contact_info i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.bis-contact {
+  background-color: #ff6000;
+  height: 100vh;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: relative;
+}
+
+.bis-contact_info {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 40vw;
+}
+
+.bis-contact_info h3 {
+  margin-bottom: 1.5rem;
+  font-size: 2rem;
+  text-transform: uppercase;
+  color: #fff;
+}
+
+.bis-contact_info i {
+  color: #fff;
+  font-size: 2rem;
+}
+
+.bis-contact_links {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  gap: 1rem;
+}
+
+.bis-footer {
+  height: 10vh;
+  width: 100%;
+  background: transparent;
+  max-height: 7rem;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  padding: .5rem 2.5rem;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  position: absolute;
+  top: auto;
+  bottom: 0%;
+  left: 0%;
+  right: 0%;
+}
+
+.bis-footer a {
+  color: #fff;
+  font-weight: 500;
+  font-size: 1.5rem;
+  margin: 1rem;
+  text-transform: uppercase;
+}
+
 .card {
   border-radius: double(10)px;
   -webkit-box-shadow: 2px 4px 8px rgba(0, 0, 0, 0.459);
@@ -2184,5 +2437,128 @@ header:hover .logo-name {
 
 .is-hidden {
   display: none;
+}
+
+.modal {
+  display: none;
+  /* Hidden by default */
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  position: fixed;
+  /* Stay in place */
+  z-index: 1;
+  /* Sit on top */
+  top: 0;
+  right: 0;
+  width: 100%;
+  /* Full width */
+  height: 100%;
+  /* Full height */
+  overflow: auto;
+  /* Enable scroll if needed */
+  background-color: black;
+  /* Fallback color */
+  background-color: rgba(0, 0, 0, 0.9);
+  /* Black w/ opacity */
+  -webkit-animation: zoom 0.3s ease-in-out;
+          animation: zoom 0.3s ease-in-out;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+@-webkit-keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+@keyframes zoom {
+  from {
+    -webkit-transform: scale(0);
+            transform: scale(0);
+  }
+  to {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+}
+
+/* Modal Content (Image) */
+.modal-content {
+  width: 50%;
+  height: 80%;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+.modal-content.bis-modal {
+  height: 55rem;
+  width: 50rem;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+/* The Close Button */
+.closeBtn {
+  position: absolute;
+  top: 2rem;
+  right: 2rem;
+  color: rgba(241, 241, 241, 0.87);
+  font-size: 2.5rem;
+  font-weight: bold;
+  z-index: 90;
+  -webkit-transition: 0.3s ease-in-out;
+  transition: 0.3s ease-in-out;
+  cursor: pointer;
+}
+
+.closeBtn:hover {
+  color: #f1f1f1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  scale: 1.5;
+}
+
+.prevButton, .nextButton {
+  position: absolute;
+  top: 50%;
+  color: rgba(241, 241, 241, 0.87);
+  font-size: 2.5rem;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  -webkit-transition: all 0.3s ease;
+  transition: all 0.3s ease;
+  cursor: pointer;
+}
+
+.prevButton:hover, .nextButton:hover {
+  color: #f1f1f1;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+  scale: 1.5;
+}
+
+.prevButton {
+  left: 22%;
+}
+
+.nextButton {
+  right: 22%;
+}
+
+/* 100% Image Width on Smaller Screens */
+@media only screen and (max-width: 700px) {
+  .modal-content {
+    width: 100%;
+  }
 }
 /*# sourceMappingURL=style.css.map */
