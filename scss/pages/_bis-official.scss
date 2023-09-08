@@ -176,6 +176,7 @@
 }
 
 .photo {
+    border: 1px solid red;
     background-color: $rose;
     height: 100vh;
     display: flex;
@@ -191,11 +192,14 @@
 }
 
 .photo_grid {
+    border: 1px solid red;
+
     width: 80vw;
     display: grid;
     grid-gap: 10px;
-    grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr));
-    grid-auto-rows: 17rem;
+    grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr));
+  
+    grid-auto-rows: 15rem;
     grid-auto-flow: dense;
   }
 
@@ -210,6 +214,165 @@
     grid-column: span 2;
     grid-row: span 2;
   }
+
+  .modal {
+    display: none; /* Hidden by default */
+    justify-content: center;
+    align-items: center;
+
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    
+    top: 0;
+    right: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
+  
+    animation: zoom 0.3s ease-in-out;
+    transition: all 0.5s ease-in-out;
+  }
+
+  
+
+   @keyframes zoom {
+
+    from {transform:scale(0)}
+
+    to {transform:scale(1)}
+  }
+
+  /* Modal Content (Image) */
+
+
+  .modal-content.bis-modal{
+    width: 50%;
+    height: 80%;
+    object-fit: cover;
+  }
+   
+  /* The Close Button */
+  .closeBtn {
+    position: absolute;
+    top: 2rem;
+    right: 2rem;
+    color: rgba(241, 241, 241, 0.87);
+    
+    font-size: 2.5rem;
+    font-weight: bold;
+    z-index: 90;
+    transition: 0.3s ease-in-out;
+    cursor: pointer;
+    &:hover{
+        color:  rgb(241, 241, 241);
+        transition: 0.3s;
+        scale: 1.5;
+    }
+  }
+
+  .prevButton, .nextButton {
+    position: absolute;
+    top: 50%;
+    color: rgba(241, 241, 241, 0.87);
+    font-size: 2.5rem;
+    transform: translateY(-50%);
+    transition: all 0.3s ease;
+    cursor: pointer;
+    &:hover{
+        color:  rgb(241, 241, 241);
+        transition: 0.3s;
+        scale: 1.5;
+    }
+  }
+
+  .prevButton {
+    left: 22%;
+  }
+
+  .nextButton {
+    right: 22%;
+  }
+
+  
+  /* 100% Image Width on Smaller Screens */
+  @media only screen and (max-width: 700px){
+    .modal-content {
+      width: 100%;
+    }
+  }
+
+@media (max-width: 1600px) {
+    .photo_grid {
+        grid-template-columns: repeat(auto-fit, minmax(13rem, 1fr));
+        grid-auto-rows: 15rem;
+    }
+
+    // .photo_grid .desktop {
+    //     grid-column: span 2;
+    //   }
+
+    
+}  
+@media (max-width: 1400px) {
+   
+    .photo_grid {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-auto-rows: 15rem;
+    }
+    .photo_grid .desktop {
+        grid-column: span 2;
+      }
+
+    .prevButton {
+    left: 23%;
+    }
+
+    .nextButton {
+    right: 23%;
+    } 
+    
+}  
+@media (max-width: 1052px) {
+
+    .photo_grid {
+        grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr));
+        grid-auto-rows: 13rem;
+    }
+    .photo_grid .desktop {
+        grid-column: span 2;
+      }
+
+    .prevButton {
+    left: 23%;
+    }
+
+    .nextButton {
+    right: 23%;
+    } 
+    
+}  
+
+@media (max-width: 850px) {
+    .photo_grid {
+        width: 90vw;
+        grid-template-columns: repeat(auto-fit, minmax(9rem, 1fr));
+        grid-auto-rows: 13rem;
+    }
+
+    .photo_grid .desktop {
+        grid-column: span 2;
+      }
+
+    .prevButton {
+    left: 23%;
+    }
+
+    .nextButton {
+    right: 23%;
+    } 
+}
 
 
 .bis-contact_info {
